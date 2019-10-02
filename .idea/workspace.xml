@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98c712e8-451b-4ab8-88b2-3e1d24b6943b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/app/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/app/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/app/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <list id="b7d0cbb5-66ce-40ce-85c4-ee7fb028f482" name="no-commit" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,6 +27,11 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="master" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="dimitrisafendras" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="myBoilerPlate" />
   </component>
   <component name="ProjectId" id="1RdagWfu8VImZwLmzkbzsuoc5kK" />
   <component name="PropertiesComponent">
@@ -110,7 +109,7 @@
       <updated>1570001845850</updated>
       <workItem from="1570001847046" duration="4208000" />
       <workItem from="1570017708419" duration="920000" />
-      <workItem from="1570018638429" duration="2512000" />
+      <workItem from="1570018638429" duration="2924000" />
     </task>
     <task id="LOCAL-00001" summary="components folder structure">
       <created>1570003354641</created>
@@ -147,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570017228666</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="implemented style Hook for App component">
+      <created>1570021264492</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1570021264492</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +178,7 @@
     <MESSAGE value="add eslint airbnb config" />
     <MESSAGE value="add prettier config" />
     <MESSAGE value="material ui setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="material ui setup" />
+    <MESSAGE value="implemented style Hook for App component" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented style Hook for App component" />
   </component>
 </project>
