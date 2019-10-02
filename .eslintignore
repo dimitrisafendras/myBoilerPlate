@@ -1,0 +1,11 @@
+blueprints/**/files/**
+coverage/**
+node_modules/**
+dist/**
+src/index.html
+*.spec.js
+**/*.test.js
+config/**
+src/serviceWorker.js
+src/index.js
+src/modules/store/store.js
