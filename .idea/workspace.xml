@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98c712e8-451b-4ab8-88b2-3e1d24b6943b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/pages/aboutUs/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/aboutUs/styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/home/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/home/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/app/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/app/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/app/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <list id="b7d0cbb5-66ce-40ce-85c4-ee7fb028f482" name="no-commit" comment="" />
@@ -37,6 +46,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/pages" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -52,6 +62,9 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/pages" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/pages/app" />
     </key>
@@ -110,6 +123,7 @@
       <workItem from="1570001847046" duration="4208000" />
       <workItem from="1570017708419" duration="920000" />
       <workItem from="1570018638429" duration="2924000" />
+      <workItem from="1570086628010" duration="3275000" />
     </task>
     <task id="LOCAL-00001" summary="components folder structure">
       <created>1570003354641</created>
