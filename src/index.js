@@ -9,6 +9,7 @@ require('typeface-roboto');
 
 const rootElement = document.getElementById('root');
 
+console.log('store', store);
 ReactDOM.render(
     <App store={store} />,
   rootElement

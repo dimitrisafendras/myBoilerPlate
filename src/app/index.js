@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { AboutUs, Home } from '../components/pages';
+import { AboutUs, ConnectedHome } from '../components/pages';
 
 export const App = ({ store }) => (
   <Provider store={store}>
@@ -12,12 +12,8 @@ export const App = ({ store }) => (
       {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
       <Switch>
-        <Route path="/about">
-          <AboutUs />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
+        <Route path="/" component={ConnectedHome} />
+        <Route path="/about" component={AboutUs} />
       </Switch>
     </Router>
   </Provider>

@@ -1,2 +1,2 @@
 export { AboutUs } from './aboutUs';
-export { Home } from './home';
+export { ConnectedHome } from './home';
