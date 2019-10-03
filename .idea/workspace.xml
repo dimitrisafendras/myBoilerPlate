@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="98c712e8-451b-4ab8-88b2-3e1d24b6943b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles.js" afterDir="false" />
     </list>
     <list id="b7d0cbb5-66ce-40ce-85c4-ee7fb028f482" name="no-commit" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,6 +37,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/pages" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -52,6 +53,9 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/pages" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/pages/app" />
     </key>
@@ -110,6 +114,7 @@
       <workItem from="1570001847046" duration="4208000" />
       <workItem from="1570017708419" duration="920000" />
       <workItem from="1570018638429" duration="2924000" />
+      <workItem from="1570086628010" duration="3434000" />
     </task>
     <task id="LOCAL-00001" summary="components folder structure">
       <created>1570003354641</created>
@@ -153,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570021264492</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="working react router">
+      <created>1570091225657</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1570091225657</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +191,7 @@
     <MESSAGE value="add prettier config" />
     <MESSAGE value="material ui setup" />
     <MESSAGE value="implemented style Hook for App component" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented style Hook for App component" />
+    <MESSAGE value="working react router" />
+    <option name="LAST_COMMIT_MESSAGE" value="working react router" />
   </component>
 </project>
