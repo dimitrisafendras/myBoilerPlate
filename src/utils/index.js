@@ -9,9 +9,7 @@ export const actionTypeCreator = actionsTypes =>
 export const dummyActionsCreator = actionTypes =>
   reduce(
     actionTypes,
-    (result, value) => {
-      return { ...result, [camelCase(value)]: createAction(value) };
-    },
+    (result, value) => ({ ...result, [camelCase(value)]: createAction(value) }),
     {}
   );
 
