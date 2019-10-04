@@ -24,5 +24,5 @@ const mapDispatchToProps = dispatch => ({
 
 export const ConnectedHome = connect(
   null,
-  mapDispatchToProps,
+  mapDispatchToProps
 )(Home);
