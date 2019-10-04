@@ -1,5 +1,6 @@
-import { createAction } from 'redux-actions';
+import { dummyActionsCreator } from '../../utils';
 import { TEST, EPIC_TEST } from './actionTypes';
 
-export const test = createAction(TEST);
-export const epicTest = createAction(EPIC_TEST);
+const actionTypes = [TEST, EPIC_TEST];
+
+export const { test, epicTest } = dummyActionsCreator(actionTypes);
