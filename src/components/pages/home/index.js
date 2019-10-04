@@ -19,10 +19,10 @@ const Home = ({ testAction }) => {
 // const mapStateToProps = () => ({data: state.dataStore.fetchedData})
 
 const mapDispatchToProps = dispatch => ({
-  testAction: bindActionCreators(test, dispatch)
+  testAction: bindActionCreators(test, dispatch),
 });
 
 export const ConnectedHome = connect(
   null,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(Home);
