@@ -1,5 +1,6 @@
 import { camelCase, reduce } from 'lodash-es';
 import { createAction } from 'redux-actions';
+
 import { initialState } from '../modules/reducers/initialState';
 
 export const actionTypeCreator = actionsTypes =>
