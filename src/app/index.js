@@ -20,5 +20,5 @@ export const App = ({ store }) => (
 );
 
 App.propTypes = {
-  store: PropTypes.any
+  store: PropTypes.any,
 };
