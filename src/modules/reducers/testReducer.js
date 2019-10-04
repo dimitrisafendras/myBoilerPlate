@@ -1,10 +1,9 @@
 import { initialState } from './initialState';
 import { TEST } from '../actions/actionTypes';
+import { reducerCreator } from '../../utils';
 
 const actionHandlers = {
   [TEST]: () => initialState
 };
 
-// FIXME refactor extract
-export const testReducer = (state = initialState, { type, payload }) =>
-  actionHandlers[type] ? actionHandlers[type](state, payload) : state;
+export const testReducer = reducerCreator(actionHandlers);

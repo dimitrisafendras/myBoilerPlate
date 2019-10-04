@@ -1,5 +1,6 @@
 import { camelCase, reduce } from 'lodash-es';
 import { createAction } from 'redux-actions';
+import { initialState } from '../modules/reducers/initialState';
 
 export const actionTypeCreator = actionsTypes =>
   reduce(actionsTypes, (result, value) => ({ ...result, [value]: value }), {});
@@ -13,3 +14,8 @@ export const dummyActionsCreator = actionTypes =>
     },
     {}
   );
+
+export const reducerCreator = actionHandlers => (
+  state = initialState,
+  { type, payload }
+) => (actionHandlers[type] ? actionHandlers[type](state, payload) : state);
