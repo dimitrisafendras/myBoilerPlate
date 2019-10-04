@@ -150,5 +150,11 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "bracketSpacing": true
   }
 }

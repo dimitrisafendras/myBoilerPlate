@@ -1,7 +1,7 @@
-import { createStore, compose, applyMiddleware } from "redux";
-import { createEpicMiddleware } from "redux-observable";
-import rootReducer from "../modules/reducers";
-import { rootEpic } from "../epics";
+import { createStore, compose, applyMiddleware } from 'redux';
+import { createEpicMiddleware } from 'redux-observable';
+import rootReducer from '../modules/reducers';
+import { rootEpic } from '../epics';
 
 const epicMiddleware = createEpicMiddleware();
 
