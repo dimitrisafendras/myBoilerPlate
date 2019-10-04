@@ -6,9 +6,5 @@ const actionHandlers = {
 };
 
 // FIXME refactor extract
-export const testReducer = (state = initialState, action) => {
-  const { type, payload } = action;
-  const actionHandler = actionHandlers[type];
-
-  return actionHandler ? actionHandler(state, payload) : state;
-};
+export const testReducer = (state = initialState, { type, payload }) =>
+  actionHandlers[type] ? actionHandlers[type](state, payload) : state;

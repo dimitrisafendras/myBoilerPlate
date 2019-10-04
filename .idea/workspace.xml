@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98c712e8-451b-4ab8-88b2-3e1d24b6943b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/epics/testEpic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/epics/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/epics/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/actions/actionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/reducers/testReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/reducers/testReducer.js" afterDir="false" />
     </list>
     <list id="b7d0cbb5-66ce-40ce-85c4-ee7fb028f482" name="no-commit" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -114,6 +118,7 @@
       <workItem from="1570017708419" duration="920000" />
       <workItem from="1570018638429" duration="2924000" />
       <workItem from="1570086628010" duration="3434000" />
+      <workItem from="1570171424890" duration="1771000" />
     </task>
     <task id="LOCAL-00001" summary="components folder structure">
       <created>1570003354641</created>
@@ -185,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570104922784</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixed state name">
+      <created>1570109373874</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1570109373875</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +227,7 @@
     <MESSAGE value="code cleanup" />
     <MESSAGE value="example reducer" />
     <MESSAGE value="example dispaching action" />
-    <option name="LAST_COMMIT_MESSAGE" value="example dispaching action" />
+    <MESSAGE value="fixed state name" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed state name" />
   </component>
 </project>

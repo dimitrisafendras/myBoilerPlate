@@ -1,5 +1,5 @@
 import { actionTypeCreator } from '../../utils';
 
-const ACTION_TYPES = ['TEST'];
+const ACTION_TYPES = ['TEST', 'EPIC_TEST'];
 
-export const { TEST } = actionTypeCreator(ACTION_TYPES);
+export const { TEST, EPIC_TEST } = actionTypeCreator(ACTION_TYPES);
