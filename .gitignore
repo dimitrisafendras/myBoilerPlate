@@ -24,3 +24,4 @@ yarn-error.log*
 
 # idea / ides
 .idea
+.idea/workspace.xml
