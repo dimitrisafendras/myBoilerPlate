@@ -1,20 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { Provider } from 'react-redux';
-import { App } from './components';
+import { App } from './app';
 import * as serviceWorker from './serviceWorker';
-
 import { store } from './store';
 
 require('typeface-roboto');
 
 const rootElement = document.getElementById('root');
 
+console.log('store', store);
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+    <App store={store} />,
   rootElement
 );
 
