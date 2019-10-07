@@ -4,7 +4,6 @@ export const styles = makeStyles(theme => {
   const { palette } = theme;
   return {
     app: {
-      minHeight: '100vh',
       backgroundColor: 'black',
     },
   };
