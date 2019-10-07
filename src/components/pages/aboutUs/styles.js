@@ -5,8 +5,6 @@ export const styles = makeStyles(theme => {
   return {
     aboutUs: {
       backgroundColor: palette.primary.main,
-      height: '1000px',
-      width: '1000px',
     },
   };
 });
