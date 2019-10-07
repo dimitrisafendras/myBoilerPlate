@@ -7,10 +7,10 @@ import { styles } from './styles';
 
 // eslint-disable-next-line no-shadow,react/prop-types
 const Home = ({ testAction }) => {
-  const { root } = styles();
+  const { home } = styles();
   const onclick = () => testAction();
   return (
-    <div className={root}>
+    <div className={home}>
       <Button onClick={onclick}>Click</Button>
     </div>
   );
