@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/styles';
 import PropTypes from 'prop-types';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Cell } from 'styled-css-grid';
 import { map } from 'lodash-es';
 import uuid from 'uuid';
@@ -22,8 +22,6 @@ export const App = ({ store }) => (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
         <AppLayout>
           <Cell area="header" className="Header">
             <Header />
