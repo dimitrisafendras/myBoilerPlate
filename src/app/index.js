@@ -12,10 +12,10 @@ export const App = ({ store }) => (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <Link to="/home">Home</Link>
+        <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-        <Route path="/home" component={ConnectedHome} />
-        <Route path="/about" component={AboutUs} />
+        <Route exact path="/" component={ConnectedHome} />
+        <Route exact path="/about" component={AboutUs} />
       </Router>
     </ThemeProvider>
   </Provider>

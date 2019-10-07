@@ -1,9 +1,9 @@
 import { initialState } from './initialState';
 import { TEST } from '../actions/actionTypes';
-import { reducerCreator } from '../../utils';
+import { createReducer } from '../../utils';
 
 const actionHandlers = {
   [TEST]: () => initialState,
 };
 
-export const testReducer = reducerCreator(actionHandlers);
+export const testReducer = createReducer(actionHandlers);
