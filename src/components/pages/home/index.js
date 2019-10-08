@@ -2,8 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Button from '@material-ui/core/Button';
+import { map } from 'lodash-es';
+import uuid from 'uuid';
 import { fetchBreweries } from '../../../modules/actions';
 import { styles } from './styles';
+import { Card } from '../../molecules/card';
 
 // eslint-disable-next-line no-shadow,react/prop-types
 const Home = ({ fetchBreweries, breweries }) => {
@@ -13,6 +16,9 @@ const Home = ({ fetchBreweries, breweries }) => {
   return (
     <div className={home}>
       <Button onClick={onclick}>Click</Button>
+      {map(breweries, brewery => (
+        <Card key={uuid.v1()} data={brewery} />
+      ))}
     </div>
   );
 };
