@@ -1,8 +1,6 @@
 import { combineReducers } from 'redux';
 import { breweriesReducer } from './breweriesReducer';
 
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
   breweriesState: breweriesReducer,
 });
-
-export default rootReducer;
