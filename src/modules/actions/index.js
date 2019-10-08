@@ -1,6 +1,11 @@
+import { createActions } from 'redux-actions';
 import { createDummyActions } from '../../utils';
-import { TEST, EPIC_TEST } from './actionTypes';
+import { FETCH_USERS, STORE_USERS } from './actionTypes';
 
-const actionTypes = [TEST, EPIC_TEST];
+const actionTypes = [FETCH_USERS, STORE_USERS];
 
-export const { test, epicTest } = createDummyActions(actionTypes);
+export const { fetchUsers } = createDummyActions(actionTypes);
+
+export const { storeUsers } = createActions({
+  STORE_USERS: users => users,
+});
