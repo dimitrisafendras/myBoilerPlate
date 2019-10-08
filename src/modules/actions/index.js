@@ -1,8 +1,14 @@
 import { createNormalActions } from '../../utils';
-import { FETCH_BREWERIES, STORE_BREWERIES } from './actionTypes';
+import {
+  FETCH_BREWERIES,
+  STORE_BREWERIES,
+  DELETE_BREWERIES,
+} from './actionTypes';
 
-const actionTypes = [FETCH_BREWERIES, STORE_BREWERIES];
+const actionTypes = [FETCH_BREWERIES, STORE_BREWERIES, DELETE_BREWERIES];
 
-export const { fetchBreweries, storeBreweries } = createNormalActions(
-  actionTypes
-);
+export const {
+  fetchBreweries,
+  storeBreweries,
+  deleteBreweries,
+} = createNormalActions(actionTypes);
