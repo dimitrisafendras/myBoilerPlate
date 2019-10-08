@@ -1,11 +1,11 @@
 import React from 'react';
 import { map } from 'lodash-es';
 import uuid from 'uuid';
-import { styles } from './styles';
+import { useStyles } from './styles';
 import { H4 } from '../../atoms/h4';
 
 export const Card = ({ data }) => {
-  const { card } = styles();
+  const { card } = useStyles();
   return (
     <div className={card}>
       {map(data, data => (

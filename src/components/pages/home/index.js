@@ -5,12 +5,12 @@ import Button from '@material-ui/core/Button';
 import { map } from 'lodash-es';
 import uuid from 'uuid';
 import { fetchBreweries } from '../../../modules/actions';
-import { styles } from './styles';
+import { useStyles } from './styles';
 import { Card } from '../../molecules/card';
 
 // eslint-disable-next-line no-shadow,react/prop-types
 const Home = ({ fetchBreweries, breweries }) => {
-  const { home } = styles();
+  const { home } = useStyles();
   const onclick = () => fetchBreweries();
   console.log('breweries', breweries);
   return (

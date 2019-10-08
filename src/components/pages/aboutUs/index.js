@@ -1,9 +1,9 @@
 import React from 'react';
 import { H1, H2, H3, H4 } from '../../atoms';
-import { styles } from './styles';
+import { useStyles } from './styles';
 
 export const AboutUs = () => {
-  const { aboutUs } = styles();
+  const { aboutUs } = useStyles();
   return (
     <div className={aboutUs}>
       <H1>ASDLFKJHASDFLKJH</H1>

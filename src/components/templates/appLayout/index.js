@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid } from 'styled-css-grid';
-import { styles } from './styles';
+import { useStyles } from './styles';
 
 export const AppLayout = ({ children }) => {
-  const { appLayout } = styles();
+  const { appLayout } = useStyles();
   return (
     <Grid
       id="layout"
-      columns="100px auto auto 100px"
+      columns="auto auto auto auto"
       rows="40px auto 40px"
       areas={[
         'header header header header',

@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/styles';
 
-export const styles = makeStyles(theme => {
+export const useStyles = makeStyles(theme => {
   const { palette } = theme;
   return {
     h3: {

@@ -1,7 +1,7 @@
 import React from 'react';
-import { styles } from './styles';
+import { useStyles } from './styles';
 
 export const Footer = () => {
-  const { footer } = styles();
+  const { footer } = useStyles();
   return <div className={footer} />;
 };

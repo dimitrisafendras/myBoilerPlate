@@ -1,9 +1,9 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
-import { styles } from './styles';
+import { useStyles } from './styles';
 
 export const H1 = ({ children }) => {
-  const { h1 } = styles();
+  const { h1 } = useStyles();
   return (
     <Typography variant="h1" className={h1}>
       {children}

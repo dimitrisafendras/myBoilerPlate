@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { styles } from './styles';
+import { useStyles } from './styles';
 
 export const Header = () => {
-  const { header } = styles();
+  const { header } = useStyles();
   return (
     <div className={header}>
       <Link to="/">Home</Link>
