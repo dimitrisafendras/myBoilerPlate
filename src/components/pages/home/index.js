@@ -2,13 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Button from '@material-ui/core/Button';
-import { fetchUsers } from '../../../modules/actions';
+import { fetchBreweries } from '../../../modules/actions';
 import { styles } from './styles';
 
 // eslint-disable-next-line no-shadow,react/prop-types
-const Home = ({ fetchUsers }) => {
+const Home = ({ fetchBreweries, breweries }) => {
   const { home } = styles();
-  const onclick = () => fetchUsers();
+  const onclick = () => fetchBreweries();
+  console.log('breweries', breweries);
   return (
     <div className={home}>
       <Button onClick={onclick}>Click</Button>
@@ -16,13 +17,15 @@ const Home = ({ fetchUsers }) => {
   );
 };
 
-// const mapStateToProps = () => ({data: state.dataStore.fetchedData})
+const mapStateToProps = ({ breweriesState }) => ({
+  breweries: breweriesState.breweries,
+});
 
 const mapDispatchToProps = dispatch => ({
-  fetchUsers: bindActionCreators(fetchUsers, dispatch),
+  fetchBreweries: bindActionCreators(fetchBreweries, dispatch),
 });
 
 export const ConnectedHome = connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Home);
