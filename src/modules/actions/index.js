@@ -5,10 +5,10 @@ import {
   DELETE_BREWERIES,
 } from './actionTypes';
 
-const actionTypes = [FETCH_BREWERIES, STORE_BREWERIES, DELETE_BREWERIES];
+const normalActionTypes = [FETCH_BREWERIES, STORE_BREWERIES, DELETE_BREWERIES];
 
 export const {
   fetchBreweries,
   storeBreweries,
   deleteBreweries,
-} = createNormalActions(actionTypes);
+} = createNormalActions(normalActionTypes);
