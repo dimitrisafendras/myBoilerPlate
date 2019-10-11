@@ -1,4 +1,4 @@
-import { createNormalActions } from '../../utils';
+import { createNormalActions } from '../utils';
 import {
   FETCH_BREWERIES,
   STORE_BREWERIES,

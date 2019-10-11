@@ -1,4 +1,4 @@
-import { createActionType } from '../../utils';
+import { createActionType } from '../utils';
 
 const ACTION_TYPES = ['FETCH_BREWERIES', 'STORE_BREWERIES', 'DELETE_BREWERIES'];
 

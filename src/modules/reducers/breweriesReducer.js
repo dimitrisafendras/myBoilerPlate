@@ -1,6 +1,6 @@
 import { initialState } from './initialState';
 import { STORE_BREWERIES, DELETE_BREWERIES } from '../actions/actionTypes';
-import { createReducer } from '../../utils';
+import { createReducer } from '../utils';
 
 const actionHandlers = {
   [STORE_BREWERIES]: (state, breweries) => ({ ...state, breweries }),

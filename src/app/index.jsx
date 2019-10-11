@@ -2,7 +2,6 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/styles';
-import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Cell } from 'styled-css-grid';
 import { map } from 'lodash-es';
@@ -40,7 +39,3 @@ export const App = () => (
     </ThemeProvider>
   </Provider>
 );
-
-App.propTypes = {
-  store: PropTypes.any,
-};
