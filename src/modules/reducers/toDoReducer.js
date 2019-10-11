@@ -1,4 +1,4 @@
-import { initialState } from './initialState';
+import { initialState } from '../utils/initialState';
 import {
   ADD_TASK,
   DELETE_TASK,
