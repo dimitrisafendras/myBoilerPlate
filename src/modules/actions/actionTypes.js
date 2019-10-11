@@ -1,9 +1,21 @@
 import { createActionType } from '../../utils';
 
-const ACTION_TYPES = ['FETCH_BREWERIES', 'STORE_BREWERIES', 'DELETE_BREWERIES'];
+const ACTION_TYPES = [
+  'FETCH_BREWERIES',
+  'STORE_BREWERIES',
+  'DELETE_BREWERIES',
+  'ADD_TASK',
+  'DELETE_TASK',
+  'EDIT_TASK',
+  'COMPLETE_TASK',
+];
 
 export const {
   FETCH_BREWERIES,
   STORE_BREWERIES,
   DELETE_BREWERIES,
+  ADD_TASK,
+  DELETE_TASK,
+  EDIT_TASK,
+  COMPLETE_TASK,
 } = createActionType(ACTION_TYPES);
