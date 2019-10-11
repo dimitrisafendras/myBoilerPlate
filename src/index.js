@@ -3,13 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { App } from './app';
 import * as serviceWorker from './serviceWorker';
-import { store } from './store';
-
-require('typeface-roboto');
 
 const rootElement = document.getElementById('root');
 
-ReactDOM.render(<App store={store} />, rootElement);
+ReactDOM.render(<App />, rootElement);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

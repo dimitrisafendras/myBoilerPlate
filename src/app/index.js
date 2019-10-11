@@ -11,13 +11,14 @@ import { AboutUs, ConnectedHome } from '../components/pages';
 import { theme } from '../theme';
 import { AppLayout } from '../components/templates';
 import { Footer, Header } from '../components/organisms';
+import { store } from '../store';
 
 const routes = {
   '/': ConnectedHome,
   '/about': AboutUs,
 };
 
-export const App = ({ store }) => (
+export const App = () => (
   <Provider store={store}>
     <ThemeProvider theme={theme}>
       <CssBaseline />
