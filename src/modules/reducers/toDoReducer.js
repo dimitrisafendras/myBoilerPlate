@@ -5,7 +5,7 @@ import {
   EDIT_TASK,
   COMPLETE_TASK,
 } from '../actions/actionTypes';
-import { createReducer } from '../../utils';
+import { createReducer } from '../utils';
 
 const actionHandlers = {
   [ADD_TASK]: (state, task) => ({
