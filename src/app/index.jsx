@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Cell } from 'styled-css-grid';
 import { map } from 'lodash-es';
 import uuid from 'uuid';
-import { AboutUs, ConnectedHome } from '../components/pages';
+import { AboutUs, ConnectedHome, ConnectedTodo } from '../components/pages';
 import { theme } from '../theme';
 import { AppLayout } from '../components/templates';
 import { Footer, Header } from '../components/organisms';
@@ -14,6 +14,7 @@ import { store } from '../store';
 
 const routes = {
   '/': ConnectedHome,
+  '/todo': ConnectedTodo,
   '/about': AboutUs,
 };
 
