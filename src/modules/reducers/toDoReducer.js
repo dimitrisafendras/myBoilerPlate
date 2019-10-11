@@ -1,3 +1,4 @@
+import { find } from 'lodash-es';
 import { initialState } from '../utils/initialState';
 import {
   ADD_TASK,
@@ -8,20 +9,21 @@ import {
 import { createReducer } from '../utils';
 
 const actionHandlers = {
-  [ADD_TASK]: (state, task) => ({
-    ...state,
-    tasks: {
-      byId: {
-        id: task.id,
-        text: task.text,
-        editable: false,
-      },
-      allIds: [task.id],
-    },
-  }),
-  [DELETE_TASK]: (state, task) => ({ ...state, task }),
-  [EDIT_TASK]: (state, task) => ({ ...state, task }),
-  [COMPLETE_TASK]: (state, task) => ({ ...state, task }),
+  [ADD_TASK]: (state, action) => addTask(state, action),
+  [EDIT_TASK]: (state, action) => editTask(state, action),
+};
+
+const addTask = (state, action) => ({
+  ...state,
+  [`task-${[action.id]}`]: {
+    id: action.id,
+    editMode: false,
+  },
+});
+
+const editTask = (state, action) => {
+  console.log('>>>>', find(state, task => console.log('111', task)));
+  return state;
 };
 
 export const toDoReducer = createReducer(actionHandlers);
