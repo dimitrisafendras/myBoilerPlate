@@ -5,12 +5,11 @@ import uuid from 'uuid';
 import { useStyles } from './styles';
 import { Card } from '../../molecules/card';
 
-// eslint-disable-next-line no-shadow,react/prop-types
 export const Home = ({ fetchBreweries, breweries, deleteBreweries }) => {
   const { home } = useStyles();
   const onclick = () => fetchBreweries();
   const onDelete = () => deleteBreweries();
-  console.log('breweries', breweries);
+
   return (
     <div className={home}>
       <Button onClick={onclick}>Click</Button>

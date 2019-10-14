@@ -70,7 +70,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "lint": "eslint src/**/*.js && eslint config/**/*.js",
+    "lint": "eslint src/**/*.js && eslint src/**/*.jsx && eslint config/**/*.js",
     "pretty-quick": "pretty-quick",
     "pretty": "npx prettier --config .prettierrc --write \\\"{,!(excluded|directories)/**/}*.{ts,js,scss}\\\""
   },
@@ -169,5 +169,8 @@
     "trailingComma": "es5",
     "singleQuote": true,
     "bracketSpacing": true
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   }
 }

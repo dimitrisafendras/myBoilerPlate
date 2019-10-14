@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
+import PropTypes from 'prop-types';
 import { useStyles } from './styles';
 
 export const H3 = ({ text }) => {
@@ -9,4 +10,8 @@ export const H3 = ({ text }) => {
       {text}
     </Typography>
   );
+};
+
+H3.propTypes = {
+  text: PropTypes.string,
 };
