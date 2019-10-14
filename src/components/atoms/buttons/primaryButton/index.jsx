@@ -10,7 +10,7 @@ export const PrimaryButton = ({ id, text, onClick }) => {
       id={id}
       onClick={onClick}
       className={primaryButton}
-      variant="outlined"
+      variant="contained"
       color="primary"
     >
       {text}

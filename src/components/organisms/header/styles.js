@@ -5,7 +5,7 @@ export const useStyles = makeStyles(theme => {
   return {
     header: {
       height: '100%',
-      backgroundColor: palette.primary.main,
+      backgroundColor: palette.primary.dark,
     },
   };
 });
