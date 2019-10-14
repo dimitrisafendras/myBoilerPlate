@@ -12,6 +12,7 @@ export const H4 = ({ text }) => {
   );
 };
 
+// FIXME: correct propTypes
 H4.propTypes = {
-  text: PropTypes.string,
+  text: PropTypes.any,
 };

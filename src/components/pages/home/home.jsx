@@ -4,6 +4,7 @@ import { map } from 'lodash-es';
 import uuid from 'uuid';
 import { useStyles } from './styles';
 import { Card } from '../../molecules/card';
+import { PrimaryButton } from '../../atoms';
 
 export const Home = ({ fetchBreweries, breweries, deleteBreweries }) => {
   const { home } = useStyles();
@@ -12,8 +13,8 @@ export const Home = ({ fetchBreweries, breweries, deleteBreweries }) => {
 
   return (
     <div className={home}>
-      <Button onClick={onclick}>Click</Button>
-      <Button onClick={onDelete}>Delete</Button>
+      <PrimaryButton onClick={onclick} text="fetchBreweries" />
+      <PrimaryButton onClick={onDelete} text="Delete" />
       {map(breweries, brewery => (
         <Card key={uuid.v1()} data={brewery} />
       ))}
