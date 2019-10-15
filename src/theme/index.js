@@ -1,4 +1,4 @@
-import { red, amber } from '@material-ui/core/colors';
+import { red } from '@material-ui/core/colors';
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
 // A custom theme for this app
@@ -6,7 +6,7 @@ export const theme = responsiveFontSizes(
   createMuiTheme({
     palette: {
       primary: {
-        main: amber.A400,
+        main: '#5a6abf',
       },
       secondary: {
         main: '#19857b',

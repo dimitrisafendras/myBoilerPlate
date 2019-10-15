@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Typography } from '@material-ui/core';
 import { useStyles } from './styles';
 
@@ -9,4 +10,9 @@ export const H4 = ({ text }) => {
       {text}
     </Typography>
   );
+};
+
+// FIXME: correct propTypes
+H4.propTypes = {
+  text: PropTypes.any,
 };

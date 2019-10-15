@@ -8,13 +8,9 @@ export const AppLayout = ({ children }) => {
   return (
     <Grid
       id="layout"
-      columns="auto auto auto auto"
+      columns="auto"
       rows="40px auto 40px"
-      areas={[
-        'header header header header',
-        'main main main main',
-        'footer footer footer footer',
-      ]}
+      areas={['header', 'main', 'footer']}
       className={appLayout}
     >
       {children}
