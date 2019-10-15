@@ -1,5 +1,5 @@
 import React from 'react';
-import { H1, H2, H3, H4 } from '../../atoms';
+import { H1, H2, H3, H4 } from '../../components';
 import { useStyles } from './styles';
 
 export const AboutUs = () => {

@@ -6,10 +6,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Cell } from 'styled-css-grid';
 import { map } from 'lodash-es';
 import uuid from 'uuid';
-import { AboutUs, ConnectedHome } from '../components/pages';
+import { AboutUs, ConnectedHome } from '../views/pages';
 import { theme } from '../theme';
-import { AppLayout } from '../components/templates';
-import { Footer, Header } from '../components/organisms';
+import { AppLayout } from '../views/templates';
+import { Footer, Header } from '../views/components';
 import { store } from '../store';
 import { useStyles } from './styles';
 

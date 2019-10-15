@@ -2,8 +2,8 @@ import React from 'react';
 import { map } from 'lodash-es';
 import uuid from 'uuid';
 import { useStyles } from './styles';
-import { Card } from '../../molecules/card';
-import { MainButton } from '../../atoms';
+import { Card } from '../../components/card';
+import { MainButton } from '../../components/buttons/mainButton';
 
 export const Home = ({ fetchBreweries, breweries, deleteBreweries }) => {
   const { home } = useStyles();

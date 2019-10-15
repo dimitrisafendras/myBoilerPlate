@@ -2,7 +2,7 @@ import React from 'react';
 import { map } from 'lodash-es';
 import uuid from 'uuid';
 import { useStyles } from './styles';
-import { H4 } from '../../atoms/h4';
+import { H4 } from '../typography';
 
 export const Card = ({ data }) => {
   const { card } = useStyles();
