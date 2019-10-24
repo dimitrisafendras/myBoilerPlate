@@ -17,3 +17,7 @@ export const Header = () => {
     </Box>
   );
 };
+
+Header.propTypes = {};
+
+Header.defaultProps = {};

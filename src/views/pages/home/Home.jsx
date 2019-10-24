@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { map } from 'lodash-es';
 import uuid from 'uuid';
 import { useStyles } from './styles';
@@ -20,3 +21,11 @@ export const Home = ({ fetchBreweries, breweries, deleteBreweries }) => {
     </div>
   );
 };
+
+Home.propTypes = {
+  fetchBreweries: PropTypes.func,
+  breweries: PropTypes.any,
+  deleteBreweries: PropTypes.func,
+};
+
+Home.defaultProps = {};

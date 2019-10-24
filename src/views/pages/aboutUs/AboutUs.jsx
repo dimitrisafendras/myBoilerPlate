@@ -13,3 +13,7 @@ export const AboutUs = () => {
     </div>
   );
 };
+
+AboutUs.propTypes = {};
+
+AboutUs.defaultProps = {};

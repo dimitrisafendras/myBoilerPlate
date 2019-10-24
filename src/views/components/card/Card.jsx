@@ -1,6 +1,7 @@
 import React from 'react';
 import { map } from 'lodash-es';
 import uuid from 'uuid';
+import PropTypes from 'prop-types';
 import { useStyles } from './styles';
 import { Text } from '../text';
 
@@ -15,3 +16,9 @@ export const Card = ({ data }) => {
     </div>
   );
 };
+
+Card.propTypes = {
+  data: PropTypes.any,
+};
+
+Card.defaultProps = {};
