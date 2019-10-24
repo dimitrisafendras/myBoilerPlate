@@ -1,4 +1,4 @@
- - Better not use ^ in dependencies versions in package.json
+ X Better not use ^ in dependencies versions in package.json
  - No need for CSS file (index.css). You can apply the same css rules using material-ui. Check out the jss-plugin-global (https://material-ui.com/styles/advanced/#global-css)
  - Consider not adding code to index files
  - No need for explicit Typography components. Make it more generic. use material-ui typography (https://material-ui.com/customization/typography/#typography)
