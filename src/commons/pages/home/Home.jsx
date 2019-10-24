@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { map } from 'lodash-es';
 import uuid from 'uuid';
 import { useStyles } from './styles';
-import { Card } from '../../components/card';
-import { MainButton } from '../../components/buttons/mainButton';
+import { Card } from '../../molecules';
+import { MainButton } from '../../atoms/buttons';
 
 export const Home = ({ fetchBreweries, breweries, deleteBreweries }) => {
   const { home } = useStyles();

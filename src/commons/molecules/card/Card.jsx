@@ -3,11 +3,10 @@ import { map } from 'lodash-es';
 import uuid from 'uuid';
 import PropTypes from 'prop-types';
 import { useStyles } from './styles';
-import { Text } from '../text';
+import { Text } from '../../atoms';
 
 export const Card = ({ data }) => {
   const { card } = useStyles();
-  console.log('data', data);
   return (
     <div className={card}>
       {map(data, data => (
