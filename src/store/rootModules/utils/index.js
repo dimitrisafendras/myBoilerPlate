@@ -1,6 +1,6 @@
 import { camelCase } from 'lodash-es';
 import { createAction } from 'redux-actions';
-import { initialState } from './initialState';
+import { initialState } from '../../../app/pages/home/homeStore/initialState';
 
 // creates a collection of action types eliminating the need to reuse the 'create' logic
 export const createActionTypes = actionsTypes =>

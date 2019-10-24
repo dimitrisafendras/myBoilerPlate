@@ -1,4 +1,4 @@
-import { initialState } from '../../../../../store/rootModules/utils/initialState';
+import { initialState } from '../initialState';
 import { STORE_BREWERIES, DELETE_BREWERIES } from '../actions/actionTypes';
 import { createReducer } from '../../../../../store/rootModules/utils';
 
