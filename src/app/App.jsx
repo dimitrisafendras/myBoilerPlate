@@ -5,7 +5,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { map } from 'lodash-es';
 import uuid from 'uuid';
-import { AboutUs, ConnectedHome } from '../commons/pages';
+import { AboutUs, ConnectedHome } from '../pages';
 import { theme } from '../theme';
 import { AppLayout } from './components/appLayout';
 import { store } from '../store';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStyles } from './styles';
-import { Text } from '../../atoms';
+import { Text } from '../../commons/atoms';
 
 export const AboutUs = () => {
   const { aboutUs } = useStyles();

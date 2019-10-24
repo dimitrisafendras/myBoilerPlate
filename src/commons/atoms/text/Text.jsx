@@ -13,7 +13,7 @@ export const Text = ({ text, variant }) => {
 };
 
 Text.propTypes = {
-  text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  text: PropTypes.string,
   variant: PropTypes.string,
 };
 

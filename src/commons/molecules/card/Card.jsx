@@ -10,7 +10,7 @@ export const Card = ({ data }) => {
   return (
     <div className={card}>
       {map(data, data => (
-        <Text key={uuid.v1()} text={data} variant="h4" />
+        <Text key={uuid.v1()} text={`${data}`} variant="h4" />
       ))}
     </div>
   );

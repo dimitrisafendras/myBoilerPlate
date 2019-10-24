@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { deleteBreweries, fetchBreweries } from '../../../modules/actions';
+import { fetchBreweries, deleteBreweries } from '../../modules/actions';
 import { Home } from './Home';
 
 const mapStateToProps = ({ breweriesState }) => ({
