@@ -7,7 +7,7 @@ import { map } from 'lodash-es';
 import uuid from 'uuid';
 import { AboutUs, ConnectedHome } from './pages';
 import { theme } from '../theme';
-import { AppLayout } from './components/appLayout';
+import { AppLayout } from './appComponents/appLayout';
 import { store } from '../store';
 
 const routes = {

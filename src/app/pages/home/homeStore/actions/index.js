@@ -1,4 +1,4 @@
-import { createNormalActions } from '../../../../../store/rootModules/utils';
+import { createNormalActions } from '../../../../../store/rootReducer/utils';
 import {
   FETCH_BREWERIES,
   STORE_BREWERIES,
