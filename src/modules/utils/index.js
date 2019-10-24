@@ -1,11 +1,10 @@
-import { camelCase, reduce } from 'lodash-es';
+import { camelCase } from 'lodash-es';
 import { createAction } from 'redux-actions';
 import { initialState } from './initialState';
 
 // creates a collection of action types eliminating the need to reuse the 'create' logic
 export const createActionType = actionsTypes =>
-  reduce(
-    actionsTypes,
+  actionsTypes.reduce(
     (accumulatedActionTypes, actionType) => ({
       ...accumulatedActionTypes,
       [actionType]: actionType,
@@ -16,8 +15,7 @@ export const createActionType = actionsTypes =>
 // Use only to create actions without special payload transformation.
 // For actions with payload transformations use createActions from redux-actions
 export const createNormalActions = actionTypes =>
-  reduce(
-    actionTypes,
+  actionTypes.reduce(
     (accumulatedActions, actionType) => ({
       ...accumulatedActions,
       [camelCase(actionType)]: createAction(actionType),

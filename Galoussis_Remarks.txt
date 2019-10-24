@@ -3,7 +3,7 @@
  X Consider not adding code to index files
  X No need for explicit Typography components. Make it more generic. use material-ui typography (https://material-ui.com/customization/typography/#typography)
  X Add Props validation (Flow)
- - No need for lodash reduce, use the js one
+ X No need for lodash reduce, use the js one
  - Consider alternative, more component-based files organisation
  - Perform a refactoring together with Dimitris
    - Styles usage (call useStyles once)
