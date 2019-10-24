@@ -1,0 +1,1 @@
+export { breweriesReducer } from './breweriesReducer';

@@ -3,7 +3,7 @@ import { createAction } from 'redux-actions';
 import { initialState } from './initialState';
 
 // creates a collection of action types eliminating the need to reuse the 'create' logic
-export const createActionType = actionsTypes =>
+export const createActionTypes = actionsTypes =>
   actionsTypes.reduce(
     (accumulatedActionTypes, actionType) => ({
       ...accumulatedActionTypes,

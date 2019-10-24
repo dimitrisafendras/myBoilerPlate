@@ -1,8 +1,8 @@
 import { map, mergeMap } from 'rxjs/operators';
 import { ofType, combineEpics } from 'redux-observable';
-import { FETCH_BREWERIES } from '../modules/actions/actionTypes';
-import { storeBreweries } from '../modules/actions';
-import { fetchBreweries } from '../apis';
+import { fetchBreweries } from '../../../../../apis';
+import { FETCH_BREWERIES } from '../actions/actionTypes';
+import { storeBreweries } from '../actions';
 
 const fetchBreweriesEpic = action$ =>
   action$.pipe(
