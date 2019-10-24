@@ -9,7 +9,6 @@ import { AboutUs, ConnectedHome } from '../pages';
 import { theme } from '../theme';
 import { AppLayout } from './components/appLayout';
 import { store } from '../store';
-import { useStyles } from './styles';
 
 const routes = {
   '/': ConnectedHome,
@@ -17,7 +16,6 @@ const routes = {
 };
 
 export const App = () => {
-  const { app } = useStyles();
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
