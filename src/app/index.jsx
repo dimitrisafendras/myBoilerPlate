@@ -3,13 +3,11 @@ import { Provider } from 'react-redux';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/styles';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Cell } from 'styled-css-grid';
 import { map } from 'lodash-es';
 import uuid from 'uuid';
 import { AboutUs, ConnectedHome } from '../views/pages';
 import { theme } from '../theme';
-import { AppLayout } from '../views/templates';
-import { Footer, Header } from '../views/components';
+import { AppLayout } from './components/appLayout';
 import { store } from '../store';
 import { useStyles } from './styles';
 
@@ -26,22 +24,9 @@ export const App = () => {
         <CssBaseline />
         <Router>
           <AppLayout>
-            <Cell area="header" className="Header">
-              <Header />
-            </Cell>
-            <Cell area="main" className={app}>
-              {map(routes, (component, route) => (
-                <Route
-                  exact
-                  path={route}
-                  component={component}
-                  key={uuid.v1()}
-                />
-              ))}
-            </Cell>
-            <Cell area="footer" className="Footer">
-              <Footer />
-            </Cell>
+            {map(routes, (component, route) => (
+              <Route exact path={route} component={component} key={uuid.v1()} />
+            ))}
           </AppLayout>
         </Router>
       </ThemeProvider>

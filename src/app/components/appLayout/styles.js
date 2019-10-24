@@ -9,5 +9,6 @@ export const useStyles = makeStyles(theme => {
       backgroundImage: `url(${image})`,
       backgroundSize: 'cover',
     },
+    main: {},
   };
 });

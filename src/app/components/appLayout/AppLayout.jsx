@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid } from 'styled-css-grid';
+import { Cell, Grid } from 'styled-css-grid';
 import { useStyles } from './styles';
+import { Header } from '../header';
+import { Footer } from '../footer';
 
 export const AppLayout = ({ children }) => {
-  const { appLayout } = useStyles();
+  const { appLayout, main } = useStyles();
   return (
     <Grid
       id="layout"
@@ -13,7 +15,15 @@ export const AppLayout = ({ children }) => {
       areas={['header', 'main', 'footer']}
       className={appLayout}
     >
-      {children}
+      <Cell area="header" className="Header">
+        <Header />
+      </Cell>
+      <Cell area="main" className={main}>
+        {children}
+      </Cell>
+      <Cell area="footer" className="Footer">
+        <Footer />
+      </Cell>
     </Grid>
   );
 };
