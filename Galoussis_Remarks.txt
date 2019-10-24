@@ -1,7 +1,7 @@
  X Better not use ^ in dependencies versions in package.json
  - No need for CSS file (index.css). You can apply the same css rules using material-ui. Check out the jss-plugin-global (https://material-ui.com/styles/advanced/#global-css)
- - Consider not adding code to index files
- - No need for explicit Typography components. Make it more generic. use material-ui typography (https://material-ui.com/customization/typography/#typography)
+ X Consider not adding code to index files
+ X No need for explicit Typography components. Make it more generic. use material-ui typography (https://material-ui.com/customization/typography/#typography)
  - Add Props validation (Flow)
  - No need for lodash reduce, use the js one
  - Consider alternative, more component-based files organisation
