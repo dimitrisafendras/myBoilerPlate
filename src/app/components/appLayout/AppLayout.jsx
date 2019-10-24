@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Cell, Grid } from 'styled-css-grid';
 import { useStyles } from './styles';
-import { Header } from '../header';
-import { Footer } from '../footer';
+import { Header, Footer } from './components';
 
 export const AppLayout = ({ children }) => {
   const { appLayout, main } = useStyles();
