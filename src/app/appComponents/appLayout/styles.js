@@ -9,8 +9,10 @@ export const useStyles = makeStyles(theme => {
       backgroundImage: `url(${image})`,
       backgroundSize: 'cover',
     },
+    header: {},
     main: {
       overflowY: 'auto',
     },
+    footer: {},
   };
 });

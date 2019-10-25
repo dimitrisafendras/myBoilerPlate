@@ -5,7 +5,7 @@ import { useStyles } from './styles';
 import { Header, Footer } from './components';
 
 export const AppLayout = ({ children }) => {
-  const { appLayout, main } = useStyles();
+  const { appLayout, header, main, footer } = useStyles();
   return (
     <Grid
       id="layout"
@@ -14,13 +14,13 @@ export const AppLayout = ({ children }) => {
       areas={['header', 'main', 'footer']}
       className={appLayout}
     >
-      <Cell area="header" className="Header">
+      <Cell area="header" className={header}>
         <Header />
       </Cell>
       <Cell area="main" className={main}>
         {children}
       </Cell>
-      <Cell area="footer" className="Footer">
+      <Cell area="footer" className={footer}>
         <Footer />
       </Cell>
     </Grid>
