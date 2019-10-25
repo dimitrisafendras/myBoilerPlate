@@ -5,10 +5,12 @@ export const useStyles = makeStyles(theme => {
   const { palette } = theme;
   return {
     appLayout: {
-      minHeight: '100vh',
+      height: '100vh',
       backgroundImage: `url(${image})`,
       backgroundSize: 'cover',
     },
-    main: {},
+    main: {
+      overflowY: 'auto',
+    },
   };
 });
