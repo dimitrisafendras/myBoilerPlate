@@ -10,9 +10,11 @@ export const useStyles = makeStyles(theme => {
       backgroundSize: 'cover',
     },
     header: {},
+
     main: {
       overflowY: 'auto',
     },
+
     footer: {},
   };
 });
