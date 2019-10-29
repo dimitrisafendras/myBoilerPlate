@@ -9,9 +9,14 @@ export const AppLayout = ({ children }) => {
   return (
     <Grid
       id="layout"
-      columns="auto"
+      columns="auto auto auto auto"
       rows="40px auto 40px"
-      areas={['header', 'main', 'footer']}
+      areas={[
+        'header header header header',
+        'main main main main',
+        'footer footer footer footer',
+      ]}
+      gap="0"
       className={appLayout}
     >
       <Cell area="header" className={header}>

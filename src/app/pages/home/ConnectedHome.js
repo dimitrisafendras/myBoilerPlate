@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { fetchBreweries, deleteBreweries } from './homeStore/actions';
 import { Home } from './Home';
 
-const mapStateToProps = ({ breweriesState }) => ({
-  breweries: breweriesState.breweries,
+const mapStateToProps = ({ homeStore }) => ({
+  breweries: homeStore.breweries,
 });
 
 const mapDispatchToProps = dispatch => ({
