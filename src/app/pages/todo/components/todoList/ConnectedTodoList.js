@@ -7,26 +7,22 @@ import {
 } from '../../toDoStore/actions';
 import { TodoList } from './TodoList';
 
-const getVisibleTodos = (todos, filter) => {
-  console.log('func', todos, filter);
-  switch (filter) {
-    case showAll.Type:
+// FIXME THIS SHIT
+const getVisibleTodos = (todos, filter = showAll().Type) => {
+  switch (filter && filter.action) {
+    case showAll().Type:
       return todos;
-    case showCompleted.Type:
+    case showCompleted().Type:
       return todos.filter(t => t.completed);
-    case showActive.Type:
+    case showActive().Type:
       return todos.filter(t => !t.completed);
     default:
-      throw new Error(`Unknown filter: ${filter}`);
   }
 };
 
-const mapStateToProps = ({ todoStore }) => {
-  console.log('store', todoStore);
-  return {
-    todos: getVisibleTodos(todoStore, todoStore.visibilityFilter),
-  };
-};
+const mapStateToProps = ({ todoStore }) => ({
+  todos: getVisibleTodos(todoStore.todos, todoStore.visibility),
+});
 
 const mapDispatchToProps = dispatch => ({
   toggleTodo: id => dispatch(toggleTodo(id)),

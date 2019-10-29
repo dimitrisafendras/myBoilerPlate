@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 export const Link = ({ active, children, onClick }) => (
   <button
     onClick={onClick}
-    disabled={active}
     style={{
       marginLeft: '4px',
     }}

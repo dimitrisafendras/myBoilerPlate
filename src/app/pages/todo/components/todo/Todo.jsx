@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { map } from 'lodash-es';
-import uuid from 'uuid';
 
 export const Todo = ({ onClick, completed, text }) => (
   <li
@@ -15,9 +13,9 @@ export const Todo = ({ onClick, completed, text }) => (
 );
 
 Todo.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  completed: PropTypes.bool.isRequired,
-  text: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+  completed: PropTypes.bool,
+  text: PropTypes.string,
 };
 
 Todo.defaultProps = {};

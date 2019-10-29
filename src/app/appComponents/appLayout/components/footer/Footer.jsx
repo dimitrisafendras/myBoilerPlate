@@ -3,10 +3,10 @@ import { ConnectedAddTodo } from '../../../../pages/todo/components/addTodo';
 import { ConnectedLink } from '../../../../pages/todo/components/link/ConnectedLink';
 import { useStyles } from './styles';
 import {
-  showAll,
-  showActive,
-  showCompleted,
-} from '/Users/cjuser/IdeaProjects/myBoilerPlate/src/app/pages/todo/toDoStore/actions/index.js';
+  SHOW_ALL,
+  SHOW_ACTIVE,
+  SHOW_COMPLETED,
+} from '/Users/cjuser/IdeaProjects/myBoilerPlate/src/app/pages/todo/toDoStore/actions/actionTypes';
 
 export const Footer = () => {
   const { footer } = useStyles();
@@ -14,9 +14,9 @@ export const Footer = () => {
     <div>
       <ConnectedAddTodo />
       <span>Show: </span>
-      <ConnectedLink filter={showAll}>All</ConnectedLink>
-      <ConnectedLink filter={showActive}>Active</ConnectedLink>
-      <ConnectedLink filter={showCompleted}>Completed</ConnectedLink>
+      <ConnectedLink filter={SHOW_ALL}>All</ConnectedLink>
+      <ConnectedLink filter={SHOW_ACTIVE}>Active</ConnectedLink>
+      <ConnectedLink filter={SHOW_COMPLETED}>Completed</ConnectedLink>
     </div>
   );
 };
