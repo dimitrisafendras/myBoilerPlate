@@ -1,0 +1,1 @@
+export { ConnectedHome } from './ConnectedHome';

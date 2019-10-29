@@ -25,7 +25,7 @@ export const createNormalActions = actionTypes =>
 // this function exists in order to replace the classic switch statement
 // in a reducer and eliminate the duplication of that logic
 // include it in every reducer file you create
-export const createReducer = (actionHandlers, initialState) => (
+export const createReducer = (actionHandlers, initialState = {}) => (
   state = initialState,
   { type, payload }
 ) => (actionHandlers[type] ? actionHandlers[type](state, payload) : state);
