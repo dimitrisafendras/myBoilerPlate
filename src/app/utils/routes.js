@@ -4,14 +4,14 @@ import { ConnectedHome, AboutUs, ConnectedTodoList } from '../pages';
 export const routes = {
   '/': {
     title: 'Home',
-    component: ConnectedHome,
+    page: ConnectedHome,
   },
   '/about': {
     title: 'About Us',
-    component: AboutUs,
+    page: AboutUs,
   },
   '/todo': {
     title: 'To Do List',
-    component: ConnectedTodoList,
+    page: ConnectedTodoList,
   },
 };

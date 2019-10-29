@@ -16,11 +16,11 @@ export const App = () => (
       <CssBaseline />
       <Router>
         <AppLayout>
-          {map(routes, (value, key) => (
+          {map(routes, (page, url) => (
             <Route
               exact
-              path={key}
-              component={value.component}
+              path={url}
+              component={page.component}
               key={uuid.v1()}
             />
           ))}

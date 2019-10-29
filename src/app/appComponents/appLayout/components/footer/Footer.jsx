@@ -1,6 +1,6 @@
 import React from 'react';
-import { ConnectedAddTodo } from '../../../../pages/todo/components/addTodo';
-import { ConnectedLink } from '../../../../pages/todo/components/link/ConnectedLink';
+import { ConnectedAddTodo } from '../../../../pages/todo/todoComponents/addTodo';
+import { ConnectedLink } from '../../../../pages/todo/todoComponents/link/ConnectedLink';
 import { useStyles } from './styles';
 import {
   SHOW_ALL,
@@ -11,7 +11,7 @@ import {
 export const Footer = () => {
   const { footer } = useStyles();
   return (
-    <div>
+    <div className={footer}>
       <ConnectedAddTodo />
       <span>Show: </span>
       <ConnectedLink filter={SHOW_ALL}>All</ConnectedLink>
@@ -24,3 +24,5 @@ export const Footer = () => {
 Footer.propTypes = {};
 
 Footer.defaultProps = {};
+
+// FIXME: remove everything from here
