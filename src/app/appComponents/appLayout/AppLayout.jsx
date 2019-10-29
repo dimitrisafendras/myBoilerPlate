@@ -22,11 +22,9 @@ export const AppLayout = ({ children }) => {
       <Cell area="header" className={header}>
         <Header />
       </Cell>
-
       <Cell area="main" className={main}>
         {children}
       </Cell>
-
       <Cell area="footer" className={footer}>
         <Footer />
       </Cell>

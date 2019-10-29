@@ -5,15 +5,10 @@ import { ThemeProvider } from '@material-ui/styles';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { map } from 'lodash-es';
 import uuid from 'uuid';
-import { AboutUs, ConnectedHome } from './pages';
 import { theme } from '../theme';
 import { AppLayout } from './appComponents/appLayout';
 import { store } from '../store';
-
-const routes = {
-  '/': ConnectedHome,
-  '/about': AboutUs,
-};
+import { routes } from './utils';
 
 export const App = () => (
   <Provider store={store}>
@@ -21,8 +16,13 @@ export const App = () => (
       <CssBaseline />
       <Router>
         <AppLayout>
-          {map(routes, (component, route) => (
-            <Route exact path={route} component={component} key={uuid.v1()} />
+          {map(routes, (value, key) => (
+            <Route
+              exact
+              path={key}
+              component={value.component}
+              key={uuid.v1()}
+            />
           ))}
         </AppLayout>
       </Router>
