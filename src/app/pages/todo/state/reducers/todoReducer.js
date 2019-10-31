@@ -13,7 +13,7 @@ const actionHandlers = {
   ],
   [TOGGLE_TODO]: (state, action) =>
     state.map(todo =>
-      todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
+      todo.id === action ? { ...todo, completed: !todo.completed } : todo
     ),
 };
 
