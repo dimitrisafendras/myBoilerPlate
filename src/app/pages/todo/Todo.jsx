@@ -2,21 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { map } from 'lodash-es';
 import uuid from 'uuid';
+import { MainButton, Text } from '../../genericComponents';
 import {
   SHOW_ACTIVE,
   SHOW_ALL,
   SHOW_COMPLETED,
 } from './state/actions/actionTypes';
 import { ConnectedAddTodo, TodoCard } from './components';
-import { ConnectedLink } from './components/link/ConnectedLink';
 
-export const Todo = ({ todos, toggleTodo }) => (
+const filters = [SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED];
+
+export const Todo = ({ todos, toggleTodo, setVisibilityFilter }) => (
   <>
     <ConnectedAddTodo />
-    <span>Show: </span>
-    <ConnectedLink filter={SHOW_ALL}>All</ConnectedLink>
-    <ConnectedLink filter={SHOW_ACTIVE}>Active</ConnectedLink>
-    <ConnectedLink filter={SHOW_COMPLETED}>Completed</ConnectedLink>
+    <Text text="Show:" />
+    {filters.map(filter => (
+      <MainButton
+        onClick={() => setVisibilityFilter(filter)}
+        text={filter}
+        key={uuid.v1()}
+      />
+    ))}
     <ul>
       {map(todos, todo => (
         <TodoCard
@@ -32,6 +38,7 @@ export const Todo = ({ todos, toggleTodo }) => (
 Todo.propTypes = {
   todos: PropTypes.any,
   toggleTodo: PropTypes.func,
+  setVisibilityFilter: PropTypes.func,
 };
 
 Todo.defaultProps = {

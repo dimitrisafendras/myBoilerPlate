@@ -4,6 +4,7 @@ import {
   showCompleted,
   showActive,
   showAll,
+  setVisibilityFilter,
 } from './state/actions';
 import { Todo } from './Todo';
 
@@ -26,6 +27,7 @@ const mapStateToProps = ({ todoState }) => ({
 
 const mapDispatchToProps = dispatch => ({
   toggleTodo: id => dispatch(toggleTodo(id)),
+  setVisibilityFilter: filter => dispatch(setVisibilityFilter(filter)),
 });
 
 export const ConnectedTodo = connect(
