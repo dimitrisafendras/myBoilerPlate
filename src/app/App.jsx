@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { map } from 'lodash-es';
 import uuid from 'uuid';
 import { theme } from '../theme';
-import { AppLayout } from './appComponents/appLayout';
+import { AppLayout } from './components/appLayout';
 import { store } from '../store';
 import { routes } from './utils';
 
