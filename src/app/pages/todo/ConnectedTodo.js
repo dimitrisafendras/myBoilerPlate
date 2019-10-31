@@ -7,6 +7,7 @@ import {
 } from './state/actions/actionTypes';
 import { Todo } from './Todo';
 
+// TODO: extract to epics????
 const filteredTodos = (todos, filter = SHOW_ALL) =>
   ({
     [SHOW_ALL]: todos,

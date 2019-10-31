@@ -16,6 +16,7 @@ export const Todo = ({ todos, toggleTodo, setVisibilityFilter }) => (
   <>
     <ConnectedAddTodo />
     <Text text="Show:" />
+    {/* TODO: extract component FiltersBar */}
     {filters.map(filter => (
       <MainButton
         onClick={() => setVisibilityFilter(filter)}
@@ -23,6 +24,7 @@ export const Todo = ({ todos, toggleTodo, setVisibilityFilter }) => (
         key={uuid.v1()}
       />
     ))}
+    {/* TODO: extract component TodoList */}
     <ul>
       {map(todos, todo => (
         <TodoCard
