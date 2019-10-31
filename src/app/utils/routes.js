@@ -6,12 +6,12 @@ export const routes = {
     title: 'Home',
     component: ConnectedHome,
   },
-  '/about': {
-    title: 'About Us',
-    component: AboutUs,
-  },
   '/todo': {
     title: 'To Do List',
     component: ConnectedTodo,
+  },
+  '/about': {
+    title: 'About Us',
+    component: AboutUs,
   },
 };
