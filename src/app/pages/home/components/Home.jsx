@@ -10,7 +10,7 @@ export const Home = ({ fetchBreweries, breweries, deleteBreweries }) => {
   const { home } = useStyles();
   const onclick = () => fetchBreweries();
   const onDelete = () => deleteBreweries();
-
+  console.log('>>>>>');
   return (
     <div className={home}>
       <MainButton onClick={onclick} text="fetchBreweries" />

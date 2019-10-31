@@ -4,7 +4,7 @@ import {
   showCompleted,
   showActive,
   showAll,
-} from '../../toDoStore/actions';
+} from '../../state/actions';
 import { TodoList } from './TodoList';
 
 // FIXME THIS SHIT
@@ -20,8 +20,8 @@ const getVisibleTodos = (todos, filter = showAll().Type) => {
   }
 };
 
-const mapStateToProps = ({ todoStore }) => ({
-  todos: getVisibleTodos(todoStore.todos, todoStore.visibility),
+const mapStateToProps = ({ todoState }) => ({
+  todos: getVisibleTodos(todoState.todos, todoState.visibility),
 });
 
 const mapDispatchToProps = dispatch => ({
