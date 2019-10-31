@@ -6,11 +6,11 @@ import {
   SHOW_ACTIVE,
   SHOW_ALL,
   SHOW_COMPLETED,
-} from '../../state/actions/actionTypes';
-import { ConnectedAddTodo, Todo } from './components';
+} from './state/actions/actionTypes';
+import { ConnectedAddTodo, TodoCard } from './components';
 import { ConnectedLink } from './components/link/ConnectedLink';
 
-export const TodoList = ({ todos, toggleTodo }) => (
+export const Todo = ({ todos, toggleTodo }) => (
   <>
     <ConnectedAddTodo />
     <span>Show: </span>
@@ -19,17 +19,21 @@ export const TodoList = ({ todos, toggleTodo }) => (
     <ConnectedLink filter={SHOW_COMPLETED}>Completed</ConnectedLink>
     <ul>
       {map(todos, todo => (
-        <Todo key={uuid.v1()} {...todo} onClick={() => toggleTodo(todo.id)} />
+        <TodoCard
+          key={uuid.v1()}
+          {...todo}
+          onClick={() => toggleTodo(todo.id)}
+        />
       ))}
     </ul>
   </>
 );
 
-TodoList.propTypes = {
+Todo.propTypes = {
   todos: PropTypes.any,
   toggleTodo: PropTypes.func,
 };
 
-TodoList.defaultProps = {
+Todo.defaultProps = {
   todos: [],
 };

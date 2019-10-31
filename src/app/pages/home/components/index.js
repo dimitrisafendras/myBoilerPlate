@@ -1,1 +1,0 @@
-export { ConnectedHome } from './ConnectedHome';

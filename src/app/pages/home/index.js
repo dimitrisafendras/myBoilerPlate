@@ -1,1 +1,1 @@
-export { ConnectedHome } from './components';
+export { ConnectedHome } from './ConnectedHome';

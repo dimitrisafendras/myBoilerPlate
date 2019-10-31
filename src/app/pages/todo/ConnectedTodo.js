@@ -4,8 +4,8 @@ import {
   showCompleted,
   showActive,
   showAll,
-} from '../../state/actions';
-import { TodoList } from './TodoList';
+} from './state/actions';
+import { Todo } from './Todo';
 
 // FIXME THIS SHIT
 const getVisibleTodos = (todos, filter = showAll().Type) => {
@@ -28,7 +28,7 @@ const mapDispatchToProps = dispatch => ({
   toggleTodo: id => dispatch(toggleTodo(id)),
 });
 
-export const ConnectedTodoList = connect(
+export const ConnectedTodo = connect(
   mapStateToProps,
   mapDispatchToProps
-)(TodoList);
+)(Todo);

@@ -1,1 +1,1 @@
-export { ConnectedTodoList } from './components';
+export { ConnectedTodo } from './ConnectedTodo';

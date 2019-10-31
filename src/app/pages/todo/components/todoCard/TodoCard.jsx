@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Todo = ({ onClick, completed, text }) => (
+export const TodoCard = ({ onClick, completed, text }) => (
   <li
     onClick={onClick}
     style={{
@@ -12,10 +12,10 @@ export const Todo = ({ onClick, completed, text }) => (
   </li>
 );
 
-Todo.propTypes = {
+TodoCard.propTypes = {
   onClick: PropTypes.func,
   completed: PropTypes.bool,
   text: PropTypes.string,
 };
 
-Todo.defaultProps = {};
+TodoCard.defaultProps = {};
