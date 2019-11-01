@@ -9,16 +9,16 @@ import { useStyles } from './styles';
 import { routes } from '../../../../utils';
 
 export const Header = () => {
-  const { header } = useStyles();
+  const { header, link } = useStyles();
   return (
     <Box
       display="flex"
       alignItems="center"
-      justifyContent="space-around"
+      justifyContent="flex-end"
       className={header}
     >
       {map(routes, (page, url) => (
-        <Link key={uuid.v1()} to={url}>
+        <Link key={uuid.v1()} to={url} className={link}>
           {page.title}
         </Link>
       ))}
