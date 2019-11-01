@@ -2,8 +2,10 @@ import { TextField } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { MainButton } from '../../../../genericComponents';
+import { useStyles } from './styles';
 
 export const AddTodo = ({ addTodo }) => {
+  const { formStyle } = useStyles();
   const [todo, setTodo] = React.useState('');
   const handleChange = event => {
     setTodo(event.target.value);
@@ -16,7 +18,7 @@ export const AddTodo = ({ addTodo }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={formStyle}>
       <TextField
         onChange={handleChange}
         value={todo}
@@ -24,7 +26,7 @@ export const AddTodo = ({ addTodo }) => {
         label="Add Task"
         margin="normal"
       />
-      <MainButton type="submit" text="Add Todo" />
+      <MainButton type="submit" text="Add Task" disabled={todo === ''} />
     </form>
   );
 };

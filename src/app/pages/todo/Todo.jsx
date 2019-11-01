@@ -5,8 +5,8 @@ import { filters } from './utils';
 
 export const Todo = ({ todos, toggleTodo, setVisibilityFilter, addTodo }) => (
   <>
-    <AddTodo addTodo={addTodo} />
     <FiltersBar filters={filters} setFilterCallback={setVisibilityFilter} />
+    <AddTodo addTodo={addTodo} />
     <TodoList todos={todos} toggleTodoCallback={toggleTodo} />
   </>
 );
