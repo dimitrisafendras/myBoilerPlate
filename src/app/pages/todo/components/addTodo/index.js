@@ -1,1 +1,1 @@
-export { ConnectedAddTodo } from './AddTodo';
+export { AddTodo } from './AddTodo';

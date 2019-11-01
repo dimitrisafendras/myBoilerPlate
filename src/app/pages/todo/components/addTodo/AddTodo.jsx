@@ -1,8 +1,8 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import { connect } from 'react-redux';
-import { addTodo } from '../../state/actions';
+import { MainButton } from '../../../../genericComponents';
 
-const AddTodo = ({ dispatch }) => {
+export const AddTodo = ({ addTodo }) => {
   let input;
 
   return (
@@ -13,7 +13,7 @@ const AddTodo = ({ dispatch }) => {
           if (!input.value.trim()) {
             return;
           }
-          dispatch(addTodo(input.value));
+          addTodo(input.value);
           input.value = '';
         }}
       >
@@ -24,4 +24,6 @@ const AddTodo = ({ dispatch }) => {
   );
 };
 
-export const ConnectedAddTodo = connect()(AddTodo);
+AddTodo.propTypes = {
+  addTodo: PropTypes.func,
+};

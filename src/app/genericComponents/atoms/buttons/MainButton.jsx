@@ -3,7 +3,16 @@ import PropTypes from 'prop-types';
 import { Button } from '@material-ui/core';
 import { useStyles } from './styles';
 
-export const MainButton = ({ id, text, onClick, variant, color, size }) => {
+// TODO: refactor
+export const MainButton = ({
+  id,
+  text,
+  onClick,
+  variant,
+  color,
+  size,
+  rest,
+}) => {
   const { mainButton } = useStyles();
   return (
     <Button
@@ -13,6 +22,7 @@ export const MainButton = ({ id, text, onClick, variant, color, size }) => {
       variant={variant}
       color={color}
       size={size}
+      {...rest}
     >
       {text}
     </Button>
