@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { toggleTodo, setVisibilityFilter, addTodo } from './state/actions';
 import { Todo } from './Todo';
-import { filteredTodos } from './utils';
+import { filteredTodos } from './configs';
 
 const mapStateToProps = ({ todoState }) => ({
   todos: filteredTodos(todoState.todos, todoState.visibility),

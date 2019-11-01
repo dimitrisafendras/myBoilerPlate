@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { AddTodo, FiltersBar, TodoList } from './components';
-import { filters } from './utils';
+import { filters } from './configs';
 
 export const Todo = ({ todos, toggleTodo, setVisibilityFilter, addTodo }) => (
   <>
