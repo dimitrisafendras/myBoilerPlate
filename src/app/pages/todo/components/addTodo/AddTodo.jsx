@@ -12,6 +12,7 @@ export const AddTodo = ({ addTodo }) => {
   const handleSubmit = event => {
     event.preventDefault();
     addTodo(todo);
+    setTodo('');
   };
 
   return (
@@ -20,7 +21,7 @@ export const AddTodo = ({ addTodo }) => {
         onChange={handleChange}
         value={todo}
         id="standard-basic"
-        label="Standard"
+        label="Add Task"
         margin="normal"
       />
       <MainButton type="submit" text="Add Todo" />

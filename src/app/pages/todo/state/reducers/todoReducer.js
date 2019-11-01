@@ -17,4 +17,4 @@ const actionHandlers = {
     ),
 };
 
-export const todoReducer = createReducer(actionHandlers, initialState);
+export const todoReducer = createReducer(actionHandlers, initialState.todos);
