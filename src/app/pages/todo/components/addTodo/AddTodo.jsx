@@ -1,26 +1,30 @@
+import { TextField } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { MainButton } from '../../../../genericComponents';
 
 export const AddTodo = ({ addTodo }) => {
-  let input;
+  const [todo, setTodo] = React.useState('');
+  const handleChange = event => {
+    setTodo(event.target.value);
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    addTodo(todo);
+  };
 
   return (
-    <div>
-      <form
-        onSubmit={e => {
-          e.preventDefault();
-          if (!input.value.trim()) {
-            return;
-          }
-          addTodo(input.value);
-          input.value = '';
-        }}
-      >
-        <input ref={node => (input = node)} />
-        <button type="submit">Add Todo</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <TextField
+        onChange={handleChange}
+        value={todo}
+        id="standard-basic"
+        label="Standard"
+        margin="normal"
+      />
+      <MainButton type="submit" text="Add Todo" />
+    </form>
   );
 };
 
