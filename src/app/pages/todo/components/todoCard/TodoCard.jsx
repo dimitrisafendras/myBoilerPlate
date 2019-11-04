@@ -7,9 +7,12 @@ import { Text, MainButton } from '../../../../genericComponents';
 import { useStyles } from './styles';
 
 export const TodoCard = ({ onClick, completed, text }) => {
-  const { todoCard } = useStyles();
+  const { todoCard, activeStyle, completedStyle } = useStyles();
   return (
-    <Card raised className={todoCard}>
+    <Card
+      raised
+      className={`${todoCard} ${completed ? completedStyle : activeStyle}`}
+    >
       <CardContent>
         <Text
           text={text}
@@ -23,6 +26,7 @@ export const TodoCard = ({ onClick, completed, text }) => {
         <MainButton
           text={completed ? 'Activate Task' : 'Complete Task'}
           onClick={onClick}
+          color={`${completed ? 'primary' : 'secondary'}`}
         />
       </CardActions>
     </Card>
