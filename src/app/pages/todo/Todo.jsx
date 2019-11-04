@@ -1,13 +1,23 @@
+import { map } from 'lodash-es';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { AddTodo, FiltersBar, TodoList } from './components';
+import uuid from 'uuid';
+import { AddTodo, FiltersBar, TodoCard, TodoList } from './components';
 import { filters } from './configs';
 
 export const Todo = ({ todos, toggleTodo, setVisibilityFilter, addTodo }) => (
   <>
-    <FiltersBar filters={filters} setFilterCallback={setVisibilityFilter} />
     <AddTodo addTodo={addTodo} />
-    <TodoList todos={todos} toggleTodoCallback={toggleTodo} />
+    <FiltersBar filters={filters} setFilterCallback={setVisibilityFilter} />
+    <TodoList>
+      {map(todos, todo => (
+        <TodoCard
+          key={uuid.v1()}
+          {...todo}
+          onClick={() => toggleTodo(todo.id)}
+        />
+      ))}
+    </TodoList>
   </>
 );
 

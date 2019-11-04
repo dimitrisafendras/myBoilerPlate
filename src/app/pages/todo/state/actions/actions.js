@@ -4,6 +4,7 @@ import {
   ADD_TODO,
   SET_VISIBILITY_FILTER,
   TOGGLE_TODO,
+  EDIT_TODO,
   SHOW_ACTIVE,
   SHOW_ALL,
   SHOW_COMPLETED,
@@ -12,6 +13,7 @@ import {
 const normalActionTypes = [
   SET_VISIBILITY_FILTER,
   TOGGLE_TODO,
+  EDIT_TODO,
   SHOW_ACTIVE,
   SHOW_ALL,
   SHOW_COMPLETED,
@@ -20,6 +22,7 @@ const normalActionTypes = [
 export const {
   setVisibilityFilter,
   toggleTodo,
+  editTodo,
   showActive,
   showAll,
   showCompleted,

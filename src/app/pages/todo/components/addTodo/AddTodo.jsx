@@ -11,7 +11,7 @@ export const AddTodo = ({ addTodo }) => {
     addTodo();
   };
 
-  return <MainButton text="Add Task" onClick={onClick} />;
+  return <MainButton text="Add Task" onClick={onClick} color="secondary" />;
 };
 
 AddTodo.propTypes = {

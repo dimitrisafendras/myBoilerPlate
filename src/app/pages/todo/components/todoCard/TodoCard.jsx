@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
+import CardActionArea from '@material-ui/core/CardActionArea';
 import { Text, MainButton } from '../../../../genericComponents';
 import { useStyles } from './styles';
 
@@ -14,15 +15,17 @@ export const TodoCard = ({ onClick, completed, text }) => {
       raised
       className={`${todoCard} ${completed ? completedStyle : activeStyle}`}
     >
-      <CardContent>
-        <Text
-          text={text}
-          variant="h5"
-          style={{
-            textDecoration: completed ? 'line-through' : 'none',
-          }}
-        />
-      </CardContent>
+      <CardActionArea onClick={() => console.log('>>>>>')}>
+        <CardContent>
+          <Text
+            text={text}
+            variant="h5"
+            style={{
+              textDecoration: completed ? 'line-through' : 'none',
+            }}
+          />
+        </CardContent>
+      </CardActionArea>
       <CardActions>
         <MainButton
           text={completed ? 'Activate Task' : 'Complete Task'}
