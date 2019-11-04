@@ -8,8 +8,6 @@ export const useStyles = makeStyles(theme => {
       height: '100%',
       backgroundColor: fade(palette.primary.dark, 0.2),
     },
-    link: {
-      margin: '0 20px',
-    },
+    link: {},
   };
 });

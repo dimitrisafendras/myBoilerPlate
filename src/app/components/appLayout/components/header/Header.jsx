@@ -14,7 +14,7 @@ export const Header = () => {
     <Box
       display="flex"
       alignItems="center"
-      justifyContent="flex-end"
+      justifyContent="space-around"
       className={header}
     >
       {map(routes, (page, url) => (
