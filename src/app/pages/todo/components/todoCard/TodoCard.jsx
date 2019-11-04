@@ -4,10 +4,12 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import { Text, MainButton } from '../../../../genericComponents';
+import { useStyles } from './styles';
 
-export const TodoCard = ({ onClick, completed, text }) => (
-  <li>
-    <Card>
+export const TodoCard = ({ onClick, completed, text }) => {
+  const { todoCard } = useStyles();
+  return (
+    <Card raised className={todoCard}>
       <CardContent>
         <Text
           text={text}
@@ -24,8 +26,8 @@ export const TodoCard = ({ onClick, completed, text }) => (
         />
       </CardActions>
     </Card>
-  </li>
-);
+  );
+};
 
 TodoCard.propTypes = {
   onClick: PropTypes.func,

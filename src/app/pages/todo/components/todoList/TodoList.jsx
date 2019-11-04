@@ -8,7 +8,7 @@ import { useStyles } from './styles';
 export const TodoList = ({ todos, toggleTodoCallback }) => {
   const { todoList } = useStyles();
   return (
-    <ul>
+    <>
       {map(todos, todo => (
         <TodoCard
           key={uuid.v1()}
@@ -16,7 +16,7 @@ export const TodoList = ({ todos, toggleTodoCallback }) => {
           onClick={() => toggleTodoCallback(todo.id)}
         />
       ))}
-    </ul>
+    </>
   );
 };
 
