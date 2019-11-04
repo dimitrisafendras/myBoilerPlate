@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import Masonry from 'react-masonry-component';
-
 import { useStyles } from './styles';
 
 const masonryOptions = {
@@ -15,7 +13,10 @@ export const TodoList = ({ children }) => {
 };
 
 TodoList.propTypes = {
-  todos: PropTypes.any,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 TodoList.defaultProps = {};

@@ -8,14 +8,14 @@ import { Text, MainButton } from '../../../../genericComponents';
 import { useStyles } from './styles';
 
 // TODO: cleanup
-export const TodoCard = ({ onClick, completed, text }) => {
+export const TodoCard = ({ onClick, editTodo, completed, text }) => {
   const { todoCard, activeStyle, completedStyle } = useStyles();
   return (
     <Card
       raised
       className={`${todoCard} ${completed ? completedStyle : activeStyle}`}
     >
-      <CardActionArea onClick={() => console.log('>>>>>')}>
+      <CardActionArea onClick={editTodo}>
         <CardContent>
           <Text
             text={text}
@@ -39,6 +39,7 @@ export const TodoCard = ({ onClick, completed, text }) => {
 
 TodoCard.propTypes = {
   onClick: PropTypes.func,
+  editTodo: PropTypes.func,
   completed: PropTypes.bool,
   text: PropTypes.string,
 };

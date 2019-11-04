@@ -5,7 +5,13 @@ import uuid from 'uuid';
 import { AddTodo, FiltersBar, TodoCard, TodoList } from './components';
 import { filters } from './configs';
 
-export const Todo = ({ todos, toggleTodo, setVisibilityFilter, addTodo }) => (
+export const Todo = ({
+  todos,
+  toggleTodo,
+  setVisibilityFilter,
+  addTodo,
+  editTodo,
+}) => (
   <>
     <AddTodo addTodo={addTodo} />
     <FiltersBar filters={filters} setFilterCallback={setVisibilityFilter} />
@@ -15,6 +21,7 @@ export const Todo = ({ todos, toggleTodo, setVisibilityFilter, addTodo }) => (
           key={uuid.v1()}
           {...todo}
           onClick={() => toggleTodo(todo.id)}
+          editTodo={() => editTodo(todo.id)}
         />
       ))}
     </TodoList>
@@ -26,6 +33,7 @@ Todo.propTypes = {
   toggleTodo: PropTypes.func,
   setVisibilityFilter: PropTypes.func,
   addTodo: PropTypes.func,
+  editTodo: PropTypes.func,
 };
 
 Todo.defaultProps = {
