@@ -10,7 +10,7 @@ const mapStateToProps = ({ todoState }) => ({
 const mapDispatchToProps = dispatch => ({
   toggleTodo: id => dispatch(toggleTodo(id)),
   setVisibilityFilter: filter => dispatch(setVisibilityFilter(filter)),
-  addTodo: input => dispatch(addTodo(input)),
+  addTodo: () => dispatch(addTodo()),
 });
 
 export const ConnectedTodo = connect(

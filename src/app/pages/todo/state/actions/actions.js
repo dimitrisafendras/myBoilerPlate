@@ -25,11 +25,11 @@ export const {
   showCompleted,
 } = createNormalActions(normalActionTypes);
 
+// TODO: initial ID based on last element id in TODOS list
 let nextTodoId = 0;
 export const { addTodo } = createActions({
-  [ADD_TODO]: text => ({
+  [ADD_TODO]: () => ({
     // eslint-disable-next-line no-plusplus
     id: nextTodoId++,
-    text,
   }),
 });

@@ -6,6 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 import { Text, MainButton } from '../../../../genericComponents';
 import { useStyles } from './styles';
 
+// TODO: cleanup
 export const TodoCard = ({ onClick, completed, text }) => {
   const { todoCard, activeStyle, completedStyle } = useStyles();
   return (
