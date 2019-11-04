@@ -4,7 +4,8 @@ export const useStyles = makeStyles(theme => {
   const { palette } = theme;
   return {
     todoCard: {
-      width: 'fit-content',
+      width: '150px',
+      wordWrap: 'break-word',
     },
   };
 });
