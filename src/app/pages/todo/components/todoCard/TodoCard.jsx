@@ -38,6 +38,7 @@ export const TodoCard = ({
       <CardActionArea>
         <CardContent className={content}>
           <img src={`${picsUrl}${id}`} alt="random pic" />
+          <Text text={text} />
         </CardContent>
       </CardActionArea>
       <CardActions className={cardActionsStyle}>
