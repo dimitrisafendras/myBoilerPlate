@@ -20,7 +20,7 @@ export const Todo = ({
         <TodoCard
           key={uuid.v1()}
           {...todo}
-          onClick={() => toggleTodo(todo.id)}
+          toggleTodo={() => toggleTodo(todo.id)}
           editTodo={() => editTodo(todo.id)}
         />
       ))}

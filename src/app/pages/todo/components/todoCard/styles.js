@@ -14,5 +14,12 @@ export const useStyles = makeStyles(theme => {
     completedStyle: {
       backgroundColor: palette.secondary.main,
     },
+    cardActionsStyle: {
+      display: 'flex',
+      flexDirection: 'column',
+    },
+    cardCta: {
+      margin: '8px 0 0 0',
+    },
   };
 });

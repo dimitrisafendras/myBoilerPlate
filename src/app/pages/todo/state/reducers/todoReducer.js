@@ -28,7 +28,7 @@ const actionHandlers = {
     ),
   [STOP_EDITING_TODO]: (state, action) =>
     state.map(todo =>
-      todo.id === action.id ? { ...todo, editMode: false } : todo
+      todo.id === action ? { ...todo, editMode: false } : todo
     ),
 };
 

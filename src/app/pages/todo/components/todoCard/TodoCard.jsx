@@ -1,3 +1,4 @@
+import { TextField } from '@material-ui/core';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from '@material-ui/core/Card';
@@ -8,8 +9,17 @@ import { Text, MainButton } from '../../../../genericComponents';
 import { useStyles } from './styles';
 
 // TODO: cleanup
-export const TodoCard = ({ onClick, editTodo, completed, text }) => {
-  const { todoCard, activeStyle, completedStyle } = useStyles();
+export const TodoCard = ({ toggleTodo, editTodo, completed, text }) => {
+  const {
+    todoCard,
+    activeStyle,
+    completedStyle,
+    cardActionsStyle,
+    cardCta,
+  } = useStyles();
+
+  const handleChange = event => console.log('event', event);
+
   return (
     <Card
       raised
@@ -26,11 +36,13 @@ export const TodoCard = ({ onClick, editTodo, completed, text }) => {
           />
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      <CardActions className={cardActionsStyle}>
+        <TextField onChange={handleChange} />
         <MainButton
           text={completed ? 'Activate Task' : 'Complete Task'}
-          onClick={onClick}
+          onClick={toggleTodo}
           color={`${completed ? 'primary' : 'secondary'}`}
+          className={cardCta}
         />
       </CardActions>
     </Card>
@@ -38,7 +50,7 @@ export const TodoCard = ({ onClick, editTodo, completed, text }) => {
 };
 
 TodoCard.propTypes = {
-  onClick: PropTypes.func,
+  toggleTodo: PropTypes.func,
   editTodo: PropTypes.func,
   completed: PropTypes.bool,
   text: PropTypes.string,
