@@ -4,14 +4,21 @@ import { MainButton } from '../../../../genericComponents';
 import { useStyles } from './styles';
 
 export const AddTodo = ({ addTodo }) => {
-  const { formStyle } = useStyles();
+  const { addTodoStyle } = useStyles();
 
   const onClick = event => {
     event.preventDefault();
     addTodo();
   };
 
-  return <MainButton text="Add Task" onClick={onClick} color="secondary" />;
+  return (
+    <MainButton
+      text="Add Task"
+      onClick={onClick}
+      color="secondary"
+      className={addTodoStyle}
+    />
+  );
 };
 
 AddTodo.propTypes = {

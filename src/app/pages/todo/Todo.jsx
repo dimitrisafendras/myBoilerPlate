@@ -21,13 +21,13 @@ export const Todo = ({
     gap="0"
     rowGap="10px"
   >
-    <Cell area="addBtn">
-      <AddTodo addTodo={addTodo} />
-    </Cell>
-    <Cell are="filters">
+    <Cell are="filters" center>
       <FiltersBar filters={filters} setFilterCallback={setVisibilityFilter} />
     </Cell>
-    <Cell area="list">
+    <Cell area="addBtn" center>
+      <AddTodo addTodo={addTodo} />
+    </Cell>
+    <Cell area="list" center>
       <TodoList>
         {map(todos, todo => (
           <TodoCard

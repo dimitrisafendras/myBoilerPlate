@@ -44,14 +44,18 @@ export const TodoCard = ({
         </CardContent>
       </CardActionArea>
       <CardActions className={cardActionsStyle}>
-        <TextField onChange={handleChange} value={text} />
+        <TextField onChange={handleChange} value={text} autoFocus />
         <MainButton
           text={completed ? 'Activate Task' : 'Complete Task'}
           onClick={toggleTodo}
           color={`${completed ? 'primary' : 'secondary'}`}
           className={cardCta}
         />
-        <MainButton text="DELETE" onClick={deleteTodo} className={deleteCta} />
+        <MainButton
+          text="DELETE"
+          onClick={deleteTodo}
+          className={`${cardCta} ${deleteCta}`}
+        />
       </CardActions>
     </Card>
   );
