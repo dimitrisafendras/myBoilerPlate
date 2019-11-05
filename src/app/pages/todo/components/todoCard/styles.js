@@ -21,5 +21,8 @@ export const useStyles = makeStyles(theme => {
     cardCta: {
       margin: '8px 0 0 0',
     },
+    deleteCta: {
+      backgroundColor: palette.error.main,
+    },
   };
 });

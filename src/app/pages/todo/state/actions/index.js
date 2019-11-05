@@ -3,6 +3,7 @@ export {
   setVisibilityFilter,
   toggleTodo,
   editTodo,
+  deleteTodo,
   showActive,
   showAll,
   showCompleted,

@@ -11,6 +11,7 @@ export const Todo = ({
   setVisibilityFilter,
   addTodo,
   editTodo,
+  deleteTodo,
 }) => (
   <Grid
     id="layout"
@@ -34,6 +35,7 @@ export const Todo = ({
             key={todo.id}
             toggleTodo={() => toggleTodo(todo.id)}
             editTodo={event => editTodo(todo.id, event)}
+            deleteTodo={() => deleteTodo(todo.id)}
           />
         ))}
       </TodoList>
@@ -47,6 +49,7 @@ Todo.propTypes = {
   setVisibilityFilter: PropTypes.func,
   addTodo: PropTypes.func,
   editTodo: PropTypes.func,
+  deleteTodo: PropTypes.func,
 };
 
 Todo.defaultProps = {

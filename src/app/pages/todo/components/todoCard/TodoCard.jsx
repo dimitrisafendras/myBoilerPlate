@@ -9,13 +9,20 @@ import { Text, MainButton } from '../../../../genericComponents';
 import { useStyles } from './styles';
 
 // TODO: cleanup
-export const TodoCard = ({ toggleTodo, editTodo, completed, text }) => {
+export const TodoCard = ({
+  toggleTodo,
+  editTodo,
+  deleteTodo,
+  completed,
+  text,
+}) => {
   const {
     todoCard,
     activeStyle,
     completedStyle,
     cardActionsStyle,
     cardCta,
+    deleteCta,
   } = useStyles();
 
   const handleChange = event => editTodo(event.target.value);
@@ -44,6 +51,7 @@ export const TodoCard = ({ toggleTodo, editTodo, completed, text }) => {
           color={`${completed ? 'primary' : 'secondary'}`}
           className={cardCta}
         />
+        <MainButton text="DELETE" onClick={deleteTodo} className={deleteCta} />
       </CardActions>
     </Card>
   );
@@ -52,6 +60,7 @@ export const TodoCard = ({ toggleTodo, editTodo, completed, text }) => {
 TodoCard.propTypes = {
   toggleTodo: PropTypes.func,
   editTodo: PropTypes.func,
+  deleteTodo: PropTypes.func,
   completed: PropTypes.bool,
   text: PropTypes.string,
 };
