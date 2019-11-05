@@ -5,7 +5,7 @@ export const useStyles = makeStyles(theme => {
   return {
     todoCard: {
       margin: '5px',
-      width: '150px',
+      width: '200px',
       wordWrap: 'break-word',
     },
     activeStyle: {
