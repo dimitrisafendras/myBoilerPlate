@@ -4,7 +4,6 @@ import {
   setVisibilityFilter,
   addTodo,
   editTodo,
-  stopEditingTodo,
 } from './state/actions';
 import { Todo } from './Todo';
 import { filteredTodos } from './configs';
@@ -18,7 +17,6 @@ const mapDispatchToProps = dispatch => ({
   setVisibilityFilter: filter => dispatch(setVisibilityFilter(filter)),
   addTodo: () => dispatch(addTodo()),
   editTodo: (id, text) => dispatch(editTodo({ id, text })),
-  stopEditingTodo: id => dispatch(stopEditingTodo(id)),
 });
 
 export const ConnectedTodo = connect(

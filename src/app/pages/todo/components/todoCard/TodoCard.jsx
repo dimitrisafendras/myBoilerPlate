@@ -18,14 +18,14 @@ export const TodoCard = ({ toggleTodo, editTodo, completed, text }) => {
     cardCta,
   } = useStyles();
 
-  const handleChange = event => console.log('event', event);
+  const handleChange = event => editTodo(event.target.value);
 
   return (
     <Card
       raised
       className={`${todoCard} ${completed ? completedStyle : activeStyle}`}
     >
-      <CardActionArea onClick={editTodo}>
+      <CardActionArea>
         <CardContent>
           <Text
             text={text}
@@ -37,7 +37,7 @@ export const TodoCard = ({ toggleTodo, editTodo, completed, text }) => {
         </CardContent>
       </CardActionArea>
       <CardActions className={cardActionsStyle}>
-        <TextField onChange={handleChange} />
+        <TextField onChange={handleChange} value={text} />
         <MainButton
           text={completed ? 'Activate Task' : 'Complete Task'}
           onClick={toggleTodo}
@@ -56,4 +56,6 @@ TodoCard.propTypes = {
   text: PropTypes.string,
 };
 
-TodoCard.defaultProps = {};
+TodoCard.defaultProps = {
+  text: '',
+};

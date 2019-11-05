@@ -1,7 +1,6 @@
 import { map } from 'lodash-es';
 import React from 'react';
 import PropTypes from 'prop-types';
-import uuid from 'uuid';
 import { AddTodo, FiltersBar, TodoCard, TodoList } from './components';
 import { filters } from './configs';
 
@@ -18,10 +17,10 @@ export const Todo = ({
     <TodoList>
       {map(todos, todo => (
         <TodoCard
-          key={uuid.v1()}
+          key={todo.id}
           {...todo}
           toggleTodo={() => toggleTodo(todo.id)}
-          editTodo={() => editTodo(todo.id)}
+          editTodo={event => editTodo(todo.id, event)}
         />
       ))}
     </TodoList>
