@@ -1,10 +1,11 @@
-import { TextField } from '@material-ui/core';
+import { CardMedia, TextField } from '@material-ui/core';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardActionArea from '@material-ui/core/CardActionArea';
+import { picsUrl } from '../../../../../apis';
 import { Text, MainButton } from '../../../../genericComponents';
 import { useStyles } from './styles';
 
@@ -15,6 +16,7 @@ export const TodoCard = ({
   deleteTodo,
   completed,
   text,
+  id,
 }) => {
   const {
     todoCard,
@@ -23,6 +25,7 @@ export const TodoCard = ({
     cardActionsStyle,
     cardCta,
     deleteCta,
+    content,
   } = useStyles();
 
   const handleChange = event => editTodo(event.target.value);
@@ -33,14 +36,8 @@ export const TodoCard = ({
       className={`${todoCard} ${completed ? completedStyle : activeStyle}`}
     >
       <CardActionArea>
-        <CardContent>
-          <Text
-            text={text}
-            variant="h5"
-            style={{
-              textDecoration: completed ? 'line-through' : 'none',
-            }}
-          />
+        <CardContent className={content}>
+          <img src={`${picsUrl}${id}`} alt="random pic" />
         </CardContent>
       </CardActionArea>
       <CardActions className={cardActionsStyle}>
@@ -67,6 +64,7 @@ TodoCard.propTypes = {
   deleteTodo: PropTypes.func,
   completed: PropTypes.bool,
   text: PropTypes.string,
+  id: PropTypes.string,
 };
 
 TodoCard.defaultProps = {
