@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import { breweriesReducer } from '../../app/pages/home/homeStore';
+import { breweriesReducer } from '../../app/pages/home/state';
+import { todoReducers } from '../../app/pages/todo/state';
 
 export const rootReducer = combineReducers({
-  homeStore: breweriesReducer,
+  homeState: breweriesReducer,
+  todoState: todoReducers,
 });

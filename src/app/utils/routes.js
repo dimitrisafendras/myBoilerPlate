@@ -1,4 +1,4 @@
-import { ConnectedHome, AboutUs, ConnectedToDo } from '../pages';
+import { ConnectedHome, AboutUs, ConnectedTodo } from '../pages';
 
 // Extracted from App js because it is needed in Header as well
 export const routes = {
@@ -6,12 +6,12 @@ export const routes = {
     title: 'Home',
     component: ConnectedHome,
   },
+  '/todo': {
+    title: 'To Do List',
+    component: ConnectedTodo,
+  },
   '/about': {
     title: 'About Us',
     component: AboutUs,
-  },
-  '/todo': {
-    title: 'To Do List',
-    component: ConnectedToDo,
   },
 };

@@ -1,1 +1,0 @@
-export { ConnectedToDo } from './ConnectedToDo';

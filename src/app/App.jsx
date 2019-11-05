@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { map } from 'lodash-es';
 import uuid from 'uuid';
 import { theme } from '../theme';
-import { AppLayout } from './appComponents/appLayout';
+import { AppLayout } from './components/appLayout';
 import { store } from '../store';
 import { routes } from './utils';
 
@@ -16,11 +16,11 @@ export const App = () => (
       <CssBaseline />
       <Router>
         <AppLayout>
-          {map(routes, (value, key) => (
+          {map(routes, (page, url) => (
             <Route
               exact
-              path={key}
-              component={value.component}
+              path={url}
+              component={page.component}
               key={uuid.v1()}
             />
           ))}
