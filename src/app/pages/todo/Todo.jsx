@@ -1,5 +1,6 @@
-import { map } from 'lodash-es';
 import React from 'react';
+import { Cell, Grid } from 'styled-css-grid';
+import { map } from 'lodash-es';
 import PropTypes from 'prop-types';
 import { AddTodo, FiltersBar, TodoCard, TodoList } from './components';
 import { filters } from './configs';
@@ -11,20 +12,33 @@ export const Todo = ({
   addTodo,
   editTodo,
 }) => (
-  <>
-    <AddTodo addTodo={addTodo} />
-    <FiltersBar filters={filters} setFilterCallback={setVisibilityFilter} />
-    <TodoList>
-      {map(todos, todo => (
-        <TodoCard
-          key={todo.id}
-          {...todo}
-          toggleTodo={() => toggleTodo(todo.id)}
-          editTodo={event => editTodo(todo.id, event)}
-        />
-      ))}
-    </TodoList>
-  </>
+  <Grid
+    id="layout"
+    columns="auto"
+    rows="auto auto auto"
+    areas={['addBtn', 'filters', 'list']}
+    gap="0"
+    rowGap="10px"
+  >
+    <Cell area="addBtn">
+      <AddTodo addTodo={addTodo} />
+    </Cell>
+    <Cell are="filters">
+      <FiltersBar filters={filters} setFilterCallback={setVisibilityFilter} />
+    </Cell>
+    <Cell area="list">
+      <TodoList>
+        {map(todos, todo => (
+          <TodoCard
+            {...todo}
+            key={todo.id}
+            toggleTodo={() => toggleTodo(todo.id)}
+            editTodo={event => editTodo(todo.id, event)}
+          />
+        ))}
+      </TodoList>
+    </Cell>
+  </Grid>
 );
 
 Todo.propTypes = {
