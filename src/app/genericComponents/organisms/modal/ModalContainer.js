@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
-import Modal from './Modal';
+import { Modal } from './Modal';
 import { modalsConfig } from './modalsConfig';
 
-const mapStateToProps = state => {
-  const { modalId } = state.app.modal;
+const mapStateToProps = ({ modalState }) => {
+  console.log('>>>>', modalState);
+
+  const { modalId } = modalState;
   const { title, texts, actions } = modalsConfig(modalId);
 
   return {
-    loading: state.app.loading,
     title,
     texts,
     actions,
@@ -15,24 +16,22 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  const { actions } = modalsConfig(ownProps.modalId);
-
-  const reducedActions = actions.reduce(
-    (accumulatedActions, { action }, index) => ({
-      ...accumulatedActions,
-      [`action${index}`]: () => dispatch(action()),
-    }),
-    {}
-  );
-
-  return {
-    ...reducedActions,
-  };
+  // const { actions } = modalsConfig(ownProps.modalId);
+  //
+  // const reducedActions = actions.reduce(
+  //   (accumulatedActions, { action }, index) => ({
+  //     ...accumulatedActions,
+  //     [`action${index}`]: () => dispatch(action()),
+  //   }),
+  //   {}
+  // );
+  //
+  // return {
+  //   ...reducedActions,
+  // };
 };
 
-const ModalContainer = connect(
+export const ConnectedModal = connect(
   mapStateToProps,
   mapDispatchToProps
 )(Modal);
-
-export default ModalContainer;

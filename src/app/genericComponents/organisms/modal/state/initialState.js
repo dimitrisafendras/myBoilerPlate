@@ -1,1 +1,1 @@
-export const initialState = {};
+export const initialState = { showModal: false, modalId: 'default' };

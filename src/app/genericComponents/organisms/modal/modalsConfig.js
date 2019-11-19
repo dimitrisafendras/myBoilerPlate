@@ -1,15 +1,14 @@
-import { I18n } from '@lib';
-import { defaultModalAction } from './state/actions';
+import { defaultAction } from './state/actions';
 
 export const modalsConfig = id =>
   ({
     default: {
       title: 'Modal',
-      texts: [I18n.t('appModal.textDefault')],
+      texts: 'Default text',
       actions: [
         {
-          actionText: I18n.t('appModal.textDefaultPositiveAction'),
-          action: defaultModalAction,
+          actionText: 'Action',
+          action: defaultAction,
         },
       ],
     },
