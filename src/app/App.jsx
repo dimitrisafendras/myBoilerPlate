@@ -8,12 +8,14 @@ import uuid from 'uuid';
 import { theme } from '../theme';
 import { AppLayout } from './components/appLayout';
 import { store } from '../store';
+import Modal from './genericComponents/organisms/modal/Modal'; // FIXME
 import { routes } from './utils';
 
 export const App = () => (
   <Provider store={store}>
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Modal />
       <Router>
         <AppLayout>
           {map(routes, (page, url) => (
