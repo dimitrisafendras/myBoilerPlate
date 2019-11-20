@@ -37,7 +37,7 @@ export const TodoCard = ({
     >
       <CardActionArea>
         <CardContent className={content}>
-          <img src={`${picsUrl}${id}`} alt="random pic" />
+          {/* <img src={`${picsUrl}${id}`} alt="random pic" /> */}
           <Text text={text} />
         </CardContent>
       </CardActionArea>
@@ -65,7 +65,7 @@ TodoCard.propTypes = {
   deleteTodo: PropTypes.func,
   completed: PropTypes.bool,
   text: PropTypes.string,
-  id: PropTypes.string,
+  id: PropTypes.number,
 };
 
 TodoCard.defaultProps = {

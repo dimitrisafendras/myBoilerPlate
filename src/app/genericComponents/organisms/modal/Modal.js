@@ -4,7 +4,8 @@ import { useStyles } from './styles';
 
 export const Modal = ({ showModal }) => {
   const { modal } = useStyles();
-  return <div className={modal} />;
+
+  return showModal ? <div className={modal} /> : null;
 };
 
 Modal.propTypes = {

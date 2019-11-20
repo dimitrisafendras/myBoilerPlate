@@ -3,15 +3,14 @@ import { Modal } from './Modal';
 import { modalsConfig } from './modalsConfig';
 
 const mapStateToProps = ({ modalState }) => {
-  console.log('>>>>', modalState);
-
-  const { modalId } = modalState;
-  const { title, texts, actions } = modalsConfig(modalId);
+  const { showModal, modalId } = modalState;
+  // const { title, texts, actions } = modalsConfig(modalId);
 
   return {
-    title,
-    texts,
-    actions,
+    // title,
+    // texts,
+    // actions,
+    showModal,
   };
 };
 
@@ -33,5 +32,5 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 
 export const ConnectedModal = connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(Modal);
