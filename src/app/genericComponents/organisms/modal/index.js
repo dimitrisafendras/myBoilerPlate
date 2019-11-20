@@ -1,0 +1,1 @@
+export { ConnectedModal } from './ModalContainer';

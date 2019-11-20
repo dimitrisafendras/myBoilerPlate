@@ -24,5 +24,8 @@ export const useStyles = makeStyles(theme => {
     deleteCta: {
       backgroundColor: palette.error.main,
     },
+    content: {
+      padding: '0',
+    },
   };
 });

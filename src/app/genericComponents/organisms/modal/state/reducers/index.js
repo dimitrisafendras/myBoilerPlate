@@ -1,0 +1,1 @@
+export { modalReducer } from './modalReducer';
