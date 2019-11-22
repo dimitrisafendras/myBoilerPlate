@@ -6,8 +6,7 @@ import { useStyles } from './styles';
 export const AddTodo = ({ addTodo }) => {
   const { addTodoStyle } = useStyles();
 
-  const onClick = event => {
-    event.preventDefault();
+  const onClick = () => {
     addTodo();
   };
 
