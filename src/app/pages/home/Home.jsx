@@ -18,8 +18,8 @@ export const Home = ({
     <div className={home}>
       <MainButton onClick={fetchBreweries} text="FetchBreweries" />
       <MainButton onClick={deleteBreweries} text="DeleteBreweries" />
-      <MainButton onClick={showModal} text="ShowModal" />
-      <MainButton onClick={hideModal} text="HideModal" />
+      {/* <MainButton onClick={showModal} text="ShowModal" /> */}
+      {/* <MainButton onClick={hideModal} text="HideModal" /> */}
       {map(breweries, brewery => (
         <Card key={uuid.v1()} data={brewery} />
       ))}
