@@ -21,11 +21,11 @@ export const Todo = ({
     gap="0"
     rowGap="10px"
   >
-    <Cell are="filters" center>
-      <FiltersBar filters={filters} setFilterCallback={setVisibilityFilter} />
-    </Cell>
     <Cell area="addBtn" center>
       <AddTodo addTodo={addTodo} />
+    </Cell>
+    <Cell are="filters" center>
+      <FiltersBar filters={filters} setFilterCallback={setVisibilityFilter} />
     </Cell>
     <Cell area="list" center>
       <TodoList>

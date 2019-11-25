@@ -8,15 +8,14 @@ import {
 import { createReducer } from '../../../../../store/rootReducer/utils';
 
 const actionHandlers = {
-  [ADD_TODO]: (state, action) =>
-    [
-      ...state,
-      {
-        id: action.id,
-        completed: false,
-        editMode: false,
-      },
-    ].reverse(),
+  [ADD_TODO]: (state, action) => [
+    {
+      id: action.id,
+      completed: false,
+      editMode: false,
+    },
+    ...state,
+  ],
   [TOGGLE_TODO]: (state, action) =>
     state.map(todo =>
       todo.id === action ? { ...todo, completed: !todo.completed } : todo
