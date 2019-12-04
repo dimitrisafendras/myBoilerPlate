@@ -14,12 +14,17 @@ export const Home = ({
   hideModal,
 }) => {
   const { home } = useStyles();
+  const btns = {
+    'Fetch Breweries': fetchBreweries,
+    'Delete Breweries': deleteBreweries,
+    'Show Modal': showModal,
+    'Hide Modal': hideModal,
+  };
   return (
     <div className={home}>
-      <MainButton onClick={fetchBreweries} text="FetchBreweries" />
-      <MainButton onClick={deleteBreweries} text="DeleteBreweries" />
-      {/* <MainButton onClick={showModal} text="ShowModal" /> */}
-      {/* <MainButton onClick={hideModal} text="HideModal" /> */}
+      {map(btns, (callBack, txt) => (
+        <MainButton key={uuid.v1()} onClick={callBack} text={txt} />
+      ))}
       {map(breweries, brewery => (
         <Card key={uuid.v1()} data={brewery} />
       ))}
