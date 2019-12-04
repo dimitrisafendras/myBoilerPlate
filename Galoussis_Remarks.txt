@@ -6,6 +6,6 @@
  X No need for lodash reduce, use the js one
  - Consider alternative, more component-based files organisation
  - Perform a refactoring together with Dimitris
-   ----> Styles usage (call useStyles once) <---- !!!!! hooks can only be called inside the body of a functional component !!!!!
+   ----> Styles usage (call useStyles once) (https://reactjs.org/docs/hooks-rules.html) <---- !!!!! hooks can only be called inside the body of a functional component !!!!!
    X Add header, footer to AppLayout
    ----> Router as child of AppLayout <----- !!!!! layout contains header which contains <Link />, we cannot have <Link /> with <Router /> child !!!!!
