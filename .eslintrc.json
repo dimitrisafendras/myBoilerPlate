@@ -24,7 +24,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["babel", "react", "promise", "prettier"],
+  "plugins": ["babel", "react", "promise", "prettier", "only-warn"],
   "rules": {
     "prettier/prettier": "error",
     "import/prefer-default-export": "off",

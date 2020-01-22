@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { Modal } from './Modal';
 import { modalsConfig } from './modalsConfig';
+import { hideModal } from './state/actions';
 
 const mapStateToProps = ({ modalState }) => {
   const { showModal, modalId } = modalState;
@@ -14,7 +16,9 @@ const mapStateToProps = ({ modalState }) => {
   };
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  hideModal: bindActionCreators(hideModal, dispatch),
+
   // const { actions } = modalsConfig(ownProps.modalId);
   //
   // const reducedActions = actions.reduce(
@@ -28,9 +32,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   // return {
   //   ...reducedActions,
   // };
-};
+});
 
 export const ConnectedModal = connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(Modal);
